@@ -1,0 +1,25 @@
+[
+  {
+    "id": "treinador-1",
+    "name": "Treinador Principal",
+    "enabled": false,
+    "credentials": {
+      "email": "seu_email@exemplo.com",
+      "password": "sua_senha_aqui",
+      "token": ""
+    },
+    "settings": {
+      "huntTarget": "auto",
+      "autoHunt": false,
+      "autoSell": true,
+      "autoHeal": true,
+      "autoDaily": true,
+      "autoEquip": true,
+      "autoTreino": true,
+      "autoCatch": true,
+      "ballType": "auto",
+      "healThreshold": 0.5
+    },
+    "bindIP": ""
+  }
+]
