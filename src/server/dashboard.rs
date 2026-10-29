@@ -48,6 +48,8 @@ impl WebServer {
                                 "kills": bot.kills.load(std::sync::atomic::Ordering::Relaxed),
                                 "gold": bot.gold.load(std::sync::atomic::Ordering::Relaxed),
                                 "running": bot.running.load(std::sync::atomic::Ordering::Relaxed),
+                                "stalled": bot.game_monitor.is_stalled(),
+                                "stall_reason": bot.game_monitor.stall_reason(),
                             }));
                         }
                         Json(json!({

@@ -1,15 +1,17 @@
 use crate::config::AccountConfig;
 use crate::engine::circuit_breaker::{CircuitBreaker, CircuitBreakerConfig};
+use crate::engine::game_monitor::{GameMetricsSnapshot, GameMonitor};
 use crate::engine::stamina::{StaminaConfig, StaminaController};
 use std::sync::atomic::{AtomicBool, AtomicU64, Ordering};
 use std::sync::Arc;
 use tokio::time::{sleep, Duration};
-use tracing::info;
+use tracing::{info, warn};
 
 pub struct BotInstance {
     pub config: AccountConfig,
     pub circuit_breaker: Arc<CircuitBreaker>,
     pub stamina: Arc<StaminaController>,
+    pub game_monitor: Arc<GameMonitor>,
     pub kills: AtomicU64,
     pub gold: AtomicU64,
     pub running: AtomicBool,
@@ -26,11 +28,13 @@ impl Supervisor {
             let cb_config = CircuitBreakerConfig::default();
             let cb = Arc::new(CircuitBreaker::new(&cfg.id, cb_config));
             let stam = Arc::new(StaminaController::new(StaminaConfig::default()));
+            let monitor = Arc::new(GameMonitor::new(&cfg.id, 180)); // 3 minutos de inércia = stall
 
             bots.push(Arc::new(BotInstance {
                 config: cfg,
                 circuit_breaker: cb,
                 stamina: stam,
+                game_monitor: monitor,
                 kills: AtomicU64::new(0),
                 gold: AtomicU64::new(0),
                 running: AtomicBool::new(false),
@@ -73,6 +77,24 @@ impl Supervisor {
             if bot.config.settings.auto_hunt {
                 bot.kills.fetch_add(1, Ordering::Relaxed);
                 bot.gold.fetch_add(50, Ordering::Relaxed);
+                bot.circuit_breaker.record_success().await;
+            }
+
+            // 4. Monitoramento do Jogo (Verifica se algum número aumentou ou diminuiu)
+            let metrics = GameMetricsSnapshot {
+                gold: bot.gold.load(Ordering::Relaxed),
+                exp: 0,
+                stamina: 100,
+                kills: bot.kills.load(Ordering::Relaxed),
+                level: 1,
+            };
+
+            if bot.game_monitor.record_metrics(metrics) {
+                // Forte indício de bot parado detectado pelo próprio bot!
+                warn!(
+                    "⚠️ [Auto-Heal Interno] Bot [{}] detectou inércia: forçando rearme de conexão...",
+                    bot.config.name
+                );
                 bot.circuit_breaker.record_success().await;
             }
 
