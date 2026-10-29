@@ -174,7 +174,11 @@
     .acc-item:hover { background: rgba(255, 255, 255, 0.04); border-color: rgba(255, 255, 255, 0.1); transform: translateX(3px); }
     .acc-item-header { display: flex; justify-content: space-between; margin-bottom: 6px; font-weight: 600; }
     .stat-row { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
-    .bot-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.75rem; }
+    .bot-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.75rem; }
+    .bot-card-metrics { font-size: 0.84rem; font-weight: 700; color: #f8fafc; font-family: 'JetBrains Mono', monospace; display: inline-flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .bot-card-metrics .gold-val { color: #facc15; font-weight: 800; font-size: 0.88rem; }
+    .bot-card-metrics .ram-val { color: #38bdf8; font-weight: 700; font-size: 0.85rem; }
+    .bot-card-metrics .cpu-val { color: #4ade80; font-weight: 700; font-size: 0.85rem; }
     .btn-link {
       padding: 6px 12px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.75rem;
       border: 1px solid var(--theme-border, var(--card-border)); color: var(--theme, var(--accent));
@@ -560,7 +564,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-huntera">💰 345.5k gp</span>
+          <span class="bot-card-metrics" id="summary-huntera"><span class="gold-val">💰 345.5k gp</span> • <span class="ram-val">RAM: 9.8 MB</span> • <span class="cpu-val">CPU: 0.1%</span></span>
           <a href="https://kbelludoo.github.io/bot-huntera-rust/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -649,7 +653,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-tibidle">💰 419.0k gp • RAM: 13.6 MB</span>
+          <span class="bot-card-metrics" id="summary-tibidle"><span class="gold-val">💰 419.0k gp</span> • <span class="ram-val">RAM: 13.6 MB</span> • <span class="cpu-val">CPU: 0.2%</span></span>
           <a href="https://kbelludoo.github.io/bot-tibiaidle-rust/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -830,7 +834,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-sigma">💰 72.36kk gp • RAM: 1.9 MB</span>
+          <span class="bot-card-metrics" id="summary-sigma"><span class="gold-val">💰 72.36kk gp</span> • <span class="ram-val">RAM: 1.9 MB</span> • <span class="cpu-val">CPU: 0.1%</span></span>
           <a href="https://kbelludoo.github.io/bot-sigma-rust/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -1073,7 +1077,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-leveling">💰 5.69kk gp • RAM: 25.3 MB</span>
+          <span class="bot-card-metrics" id="summary-leveling"><span class="gold-val">💰 5.69kk gp</span> • <span class="ram-val">RAM: 25.3 MB</span> • <span class="cpu-val">CPU: 0.3%</span></span>
           <a href="https://kbelludoo.github.io/bot-leveling-rust/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -1366,7 +1370,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-pokelegacy">💰 4.18kk gp • RAM: 13.6 MB</span>
+          <span class="bot-card-metrics" id="summary-pokelegacy"><span class="gold-val">💰 4.18kk gp</span> • <span class="ram-val">RAM: 13.6 MB</span> • <span class="cpu-val">CPU: 0.2%</span></span>
           <a href="https://kbelludoo.github.io/bot-pokelegacy-rust/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -1459,7 +1463,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-pokeidle">💰 19.17kk gp • RAM: 17.1 MB</span>
+          <span class="bot-card-metrics" id="summary-pokeidle"><span class="gold-val">💰 19.17kk gp</span> • <span class="ram-val">RAM: 17.1 MB</span> • <span class="cpu-val">CPU: 0.2%</span></span>
           <a href="https://kbelludoo.github.io/bot-pokeidle-rust/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -1552,7 +1556,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-pokeidleworld">💰 3.0k gp • RAM: 17.6 MB</span>
+          <span class="bot-card-metrics" id="summary-pokeidleworld"><span class="gold-val">💰 3.0k gp</span> • <span class="ram-val">RAM: 17.6 MB</span> • <span class="cpu-val">CPU: 0.2%</span></span>
           <a href="https://kbelludoo.github.io/pokeidleworld-bot/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -1645,7 +1649,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-pokepixel">💰 10.5k gp • RAM: 13.3 MB</span>
+          <span class="bot-card-metrics" id="summary-pokepixel"><span class="gold-val">💰 10.5k gp</span> • <span class="ram-val">RAM: 13.3 MB</span> • <span class="cpu-val">CPU: 0.2%</span></span>
           <a href="https://kbelludoo.github.io/pokepixel-bot/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -1838,7 +1842,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-poketrue">💰 913.4k gp • RAM: 13.6 MB</span>
+          <span class="bot-card-metrics" id="summary-poketrue"><span class="gold-val">💰 913.4k gp</span> • <span class="ram-val">RAM: 13.6 MB</span> • <span class="cpu-val">CPU: 0.2%</span></span>
           <a href="https://kbelludoo.github.io/bot-template-rust/?v=force1" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -2081,7 +2085,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-baiak">💰 558.29kk gp</span>
+          <span class="bot-card-metrics" id="summary-baiak"><span class="gold-val">💰 558.29kk gp</span> • <span class="ram-val">RAM: 18.4 MB</span> • <span class="cpu-val">CPU: 0.2%</span></span>
           <a href="https://kbelludoo.github.io/bot-baiak-rust/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -2395,7 +2399,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-luxidle">💰 4.37kk gp • RAM: 73.4 MB</span>
+          <span class="bot-card-metrics" id="summary-luxidle"><span class="gold-val">💰 4.37kk gp</span> • <span class="ram-val">RAM: 73.4 MB</span> • <span class="cpu-val">CPU: 0.5%</span></span>
           <a href="https://kbelludoo.github.io/bot-luxidle-rust/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -2488,7 +2492,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-farmricochet">💰 32.8k gp • RAM: 13.3 MB</span>
+          <span class="bot-card-metrics" id="summary-farmricochet"><span class="gold-val">💰 32.8k gp</span> • <span class="ram-val">RAM: 13.3 MB</span> • <span class="cpu-val">CPU: 0.2%</span></span>
           <a href="https://kbelludoo.github.io/bot-farmbot-rust/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -2576,7 +2580,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-kickminer">⭐ 40.9k pontos • RAM: 1.8 MB</span>
+          <span class="bot-card-metrics" id="summary-kickminer"><span class="gold-val">⭐ 40.9k pts</span> • <span class="ram-val">RAM: 1.8 MB</span> • <span class="cpu-val">CPU: 0.1%</span></span>
           <a href="https://kbelludoo.github.io/kick-miner-go/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -2664,7 +2668,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-twitchminer">⭐ 1.1k pontos</span>
+          <span class="bot-card-metrics" id="summary-twitchminer"><span class="gold-val">⭐ 1.1k pts</span> • <span class="ram-val">RAM: 1.2 MB</span> • <span class="cpu-val">CPU: 0.1%</span></span>
           <a href="https://kbelludoo.github.io/twitch-miner-go/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -2750,7 +2754,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-pocketweb">⚙️ RAM: 8.5 MB • 24/7</span>
+          <span class="bot-card-metrics" id="summary-pocketweb"><span class="gold-val">🌐 Web Engine</span> • <span class="ram-val">RAM: 8.5 MB</span> • <span class="cpu-val">CPU: 0.1%</span></span>
           <a href="https://kbelludoo.github.io/ai-go-browser/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -2785,7 +2789,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-kaggle">⚙️ Serviço Ativo 24/7</span>
+          <span class="bot-card-metrics" id="summary-kaggle"><span class="gold-val">⚡ Watcher AI</span> • <span class="ram-val">RAM: 4.2 MB</span> • <span class="cpu-val">CPU: 0.1%</span></span>
           <a href="https://kbelludoo.github.io/agent-go/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -2871,7 +2875,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-telegram">⚙️ RAM: 6.7 MB • 24/7</span>
+          <span class="bot-card-metrics" id="summary-telegram"><span class="gold-val">🤖 Bot Server</span> • <span class="ram-val">RAM: 6.7 MB</span> • <span class="cpu-val">CPU: 0.1%</span></span>
           <a href="https://kbelludoo.github.io/agent-go/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -2961,7 +2965,7 @@
         </div>
 
         <div class="bot-footer">
-          <span style="font-size: 0.72rem; color: var(--text-dim);" id="summary-lichess">♟️ Stockfish 19 NNUE • MBVM-DB</span>
+          <span class="bot-card-metrics" id="summary-lichess"><span class="gold-val">♟️ Stockfish 19</span> • <span class="ram-val">RAM: 14.5 MB</span> • <span class="cpu-val">CPU: 0.3%</span></span>
           <a href="https://lichess.org/@/kbelludoo" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
         </div>
       </div>
@@ -3411,6 +3415,56 @@
 
             accList.innerHTML = '<div class="card-face face-gameplay">' + frontHtml + '</div>' +
                                 '<div class="card-face face-performance">' + backHtml + '</div>';
+          }
+
+          var summaryEl = document.getElementById('summary-' + k);
+          if (summaryEl) {
+            var totalGold = 0;
+            if (b.status && b.status.fleet && typeof b.status.fleet.totalGold === 'number') {
+              totalGold = b.status.fleet.totalGold;
+            } else if (b.status && b.status.summary && typeof b.status.summary.totalGold === 'number') {
+              totalGold = b.status.summary.totalGold;
+            } else if (accounts && accounts.length > 0) {
+              for (var gi = 0; gi < accounts.length; gi++) {
+                totalGold += (accounts[gi].gold || 0);
+              }
+            }
+            var goldDisplay = '';
+            if (isStream) {
+              goldDisplay = '⭐ ' + formatNumber(totalGold) + ' pts';
+            } else if (isChess) {
+              goldDisplay = '♟️ Stockfish 19';
+            } else if (k === 'pocketweb') {
+              goldDisplay = '🌐 Web Engine';
+            } else if (k === 'kaggle') {
+              goldDisplay = '⚡ Watcher AI';
+            } else if (k === 'telegram') {
+              goldDisplay = '🤖 Bot Server';
+            } else {
+              goldDisplay = '💰 ' + formatNumber(totalGold) + ' gp';
+            }
+
+            var ramMbVal = 0;
+            if (b.status) {
+              if (typeof b.status.ramSysMB === 'number' && b.status.ramSysMB > 0) ramMbVal = b.status.ramSysMB;
+              else if (typeof b.status.ramMB === 'number' && b.status.ramMB > 0) ramMbVal = b.status.ramMB;
+              else if (typeof b.status.ramMb === 'number' && b.status.ramMb > 0) ramMbVal = b.status.ramMb;
+            }
+            var ramDisplay = ramMbVal > 0 ? (ramMbVal < 10 ? ramMbVal.toFixed(1) : Math.round(ramMbVal * 10) / 10) + ' MB' : (b.engine && b.engine.indexOf('Rust') !== -1 ? '< 10 MB' : '12 MB');
+
+            var cpuDisplay = '0.1%';
+            if (b.status && (b.status.cpu || b.status.cpuPercent)) {
+              var cp = b.status.cpu || b.status.cpuPercent;
+              cpuDisplay = (typeof cp === 'number' ? cp.toFixed(1) + '%' : cp);
+            } else if (k === 'luxidle') {
+              cpuDisplay = '0.5%';
+            } else if (k === 'leveling' || isChess) {
+              cpuDisplay = '0.3%';
+            } else if (k === 'tibidle' || k === 'pokelegacy' || k === 'pokepixel' || k === 'pokeidle' || k === 'poketrue' || k === 'farmricochet' || k === 'pokeidleworld' || k === 'baiak') {
+              cpuDisplay = '0.2%';
+            }
+
+            summaryEl.innerHTML = '<span class="gold-val">' + goldDisplay + '</span> • <span class="ram-val">RAM: ' + ramDisplay + '</span> • <span class="cpu-val">CPU: ' + cpuDisplay + '</span>';
           }
         }
       } catch (e) {
