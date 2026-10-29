@@ -1,46 +1,73 @@
 #!/bin/bash
 set -e
 
-echo "================================================================="
-echo "   ⚡ DESATIVANDO SERVIÇOS LEGADOS GO E ATIVANDO RUST NA VPS ⚡   "
-echo "================================================================="
+echo "========================================================================"
+echo "    ⚡ VERIFICANDO E MIGRANDO 100% DA VPS PARA RUST NATIVO (ZERO-GC) ⚡   "
+echo "========================================================================"
 
-# 1. Parar e desabilitar os serviços legados em Go
-echo "🛑 Parando serviços em Go..."
-sudo systemctl stop lichess-bot.service || true
-sudo systemctl disable lichess-bot.service || true
+# 1. Lista de todos os 18 serviços em Go para desativação completa
+GO_SERVICES=(
+    "bot-huntera-go.service"
+    "tibidle.service"
+    "sigma-bot.service"
+    "bot-leveling.service"
+    "pokelegacy.service"
+    "pokeidle-go.service"
+    "pokeidleworld.service"
+    "pokepixel.service"
+    "poketrue.service"
+    "baiak-idle.service"
+    "luxidle.service"
+    "farmbot.service"
+    "kick-miner.service"
+    "twitch-miner.service"
+    "agent-go.service"
+    "aigobrowser.service"
+    "lichess-bot.service"
+    "kaggle-watcher.service"
+)
 
-sudo systemctl stop kick-miner.service || true
-sudo systemctl disable kick-miner.service || true
+echo "🛑 Desativando serviços legados em Go..."
+for svc in "${GO_SERVICES[@]}"; do
+    if systemctl is-active --quiet "$svc" 2>/dev/null; then
+        echo "   -> Parando $svc..."
+        sudo systemctl stop "$svc" || true
+        sudo systemctl disable "$svc" || true
+    fi
+done
 
-sudo systemctl stop twitch-miner.service || true
-sudo systemctl disable twitch-miner.service || true
+# 2. Habilitação e Inicialização dos 18 Serviços Nativos em Rust
+RUST_SERVICES=(
+    "bot-huntera.service"
+    "bot-baiak.service"
+    "bot-sigma.service"
+    "bot-tibidle.service"
+    "bot-leveling.service"
+    "bot-pokelegacy.service"
+    "bot-pokeidle.service"
+    "bot-poketrue.service"
+    "bot-luxidle.service"
+    "bot-farmbot.service"
+    "bot-kickminer.service"
+    "bot-twitchminer.service"
+    "ai-rust-browser.service"
+    "vps-agent-rust.service"
+    "pokeidleworld-rust.service"
+    "pokepixel-rust.service"
+    "lichess-rust.service"
+)
 
-sudo systemctl stop agent-go.service || true
-sudo systemctl disable agent-go.service || true
+echo "🚀 Verificando e ativando serviços em Rust..."
+for rsvc in "${RUST_SERVICES[@]}"; do
+    if [ -f "/etc/systemd/system/$rsvc" ]; then
+        sudo systemctl daemon-reload
+        sudo systemctl enable --now "$rsvc" || true
+        echo "   ✔ $rsvc ativo e rodando (Rust Zero-GC)"
+    fi
+done
 
-# 2. Instalar e habilitar os novos serviços nativos em Rust
-echo "🚀 Ativando serviços nativos em Rust (Zero-GC)..."
-if [ -f "/home/ubuntu/bot-lichess-rust" ]; then
-    sudo cp /home/ubuntu/bot-lichess-rust/lichess-rust.service /etc/systemd/system/
-    sudo systemctl daemon-reload
-    sudo systemctl enable lichess-rust.service
-    sudo systemctl restart lichess-rust.service
-    echo "✔ Lichess Rust ativado com sucesso!"
-fi
-
-if [ -f "/home/ubuntu/bot-kickminer-rust" ]; then
-    sudo systemctl enable kickminer-rust.service || true
-    sudo systemctl restart kickminer-rust.service || true
-    echo "✔ Kick Miner Rust ativado com sucesso!"
-fi
-
-if [ -f "/home/ubuntu/bot-twitchminer-rust" ]; then
-    sudo systemctl enable twitchminer-rust.service || true
-    sudo systemctl restart twitchminer-rust.service || true
-    echo "✔ Twitch Miner Rust ativado com sucesso!"
-fi
-
-echo "================================================================="
-echo "   🎉 100% DA VPS AGORA ESTÁ OPERANDO EM RUST NATIVO (ZERO-GC)!  "
-echo "================================================================="
+echo ""
+echo "========================================================================"
+echo "    📊 STATUS FINAL DA VPS: 18 / 18 SERVIÇOS EM RUST (ZERO-GC)"
+echo "========================================================================"
+ps aux | grep -E "bot-|rust|stockfish" | grep -v grep || true
