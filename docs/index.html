@@ -2674,6 +2674,77 @@
       </div>
       
       
+            <div class="bot-card" id="card-restream" style="--theme: #f43f5e; --theme-bg: rgba(244, 63, 94, 0.12); --theme-border: rgba(244, 63, 94, 0.45); --theme-glow: rgba(244, 63, 94, 0.25);">
+        <div>
+          <div class="bot-header">
+            <div class="bot-name-group">
+              <h3>⚡ Restream Rust Engine</h3>
+              <span class="bot-port">
+                PORTA 3011 • 
+                STREAM HUD &amp; RTMP RELAY
+              </span>
+            </div>
+            <div class="face-header-controls">
+              <button class="face-toggle-btn" onclick="toggleCardFace('restream')" title="Clique para alternar visão Gameplay / Rendimento">
+                🔄 <span id="facetext-restream">VISÃO</span>
+              </button>
+              <span class="badge-status" id="badge-restream">
+                <span class="live-wave"><span></span><span></span><span></span></span>
+                3 AO VIVO
+              </span>
+            </div>
+          </div>
+
+          <div class="acc-list" id="acclist-restream">
+              <div class="card-face face-gameplay">
+                <div class="acc-item">
+                  <div class="acc-item-header">
+                    <span>📡 Fan-out Triplo RTMP</span>
+                    <span style="color: #f43f5e; font-size: 0.72rem; font-weight: 700;">RTMP TEE RELAY</span>
+                  </div>
+                  <div class="stat-row" style="background: rgba(244, 63, 94, 0.12); padding: 4px 8px; border-radius: 6px; margin-bottom: 4px;">
+                    <span style="font-weight: 700; font-size: 0.72rem;">🎥 Kick • Twitch • YouTube</span>
+                  </div>
+                  <div class="stat-row">
+                    <span style="color: #facc15; font-weight: 800;">📻 Nightwave Plaza Lo-Fi</span>
+                    <span style="color: #38bdf8; font-weight: 700;">🔴 720p @ 10 FPS</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-face face-performance">
+                <div class="acc-item">
+                  <div class="acc-item-header">
+                    <span>⚡ Telemetria Stream</span>
+                    <span class="perf-tag">ONLINE 24/7</span>
+                  </div>
+                  <div class="stat-row">
+                    <span>🔄 Ingest RTMP</span>
+                    <span style="color: #4ade80; font-weight: 700;">Porta :1935 (Zero-GC)</span>
+                  </div>
+                  <div class="stat-row">
+                    <span>🧠 Memória Bot (Rust)</span>
+                    <span style="color: #38bdf8; font-weight: 600;">&lt; 5 MB</span>
+                  </div>
+                  <div class="stat-row">
+                    <span>⏱️ Uptime Contínuo</span>
+                    <span style="color: #facc15;">24/7 Ativo</span>
+                  </div>
+                  <div class="stat-row">
+                    <span>🛡️ Pipeline FFmpeg</span>
+                    <span style="color: #a855f7; font-weight: 700;">Zero-Overhead Supervisor</span>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="bot-footer">
+          <span class="bot-card-metrics" id="summary-restream"><span class="gold-val">🔴 3 Streams</span> • <span class="ram-val">RAM: 1.3 MB</span> • <span class="cpu-val">CPU: 0.2%</span></span>
+          <a href="https://kbelludoo.github.io/restream-rust/" target="_blank" class="btn-link">Abrir Dashboard ↗</a>
+        </div>
+      </div>
+
       <div class="bot-card" id="card-pocketweb" style="--theme: #3b82f6; --theme-bg: rgba(59, 130, 246, 0.12); --theme-border: rgba(59, 130, 246, 0.45); --theme-glow: rgba(59, 130, 246, 0.25);">
         <div>
           <div class="bot-header">
@@ -3297,7 +3368,7 @@
           var accList = document.getElementById('acclist-' + k);
           var badge = document.getElementById('badge-' + k);
           var accounts = getUnifiedAccounts(b);
-          var isStream = (k === 'kickminer' || k === 'twitchminer');
+          var isStream = (k === 'kickminer' || k === 'twitchminer' || k === 'restream');
           var isService = (k === 'pocketweb' || k === 'aigobrowser' || k === 'kaggle' || k === 'telegram');
           var isChess = (k === 'lichess' || k === 'chess');
 

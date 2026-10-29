@@ -3621,11 +3621,32 @@
           }
         }
       }
+    },
+    "restream": {
+      "dashboardUrl": "https://kbelludoo.github.io/restream-rust/",
+      "engine": "Native Rust Zero-GC Engine (< 5MB RAM)",
+      "game": "Restream Relay & HUD",
+      "name": "⚡ Restream Rust Engine",
+      "port": 3011,
+      "status": {
+        "activeStreams": 3,
+        "engine": "Native Rust Zero-GC (< 5MB RAM)",
+        "fps": 10,
+        "resolution": "720p",
+        "targets": [
+          "Twitch (active)",
+          "Kick (active)",
+          "YouTube (active)"
+        ],
+        "uptime": "24/7 Ativo",
+        "ramAllocMB": 0.35,
+        "ramSysMB": 1.3
+      }
     }
   },
   "summary": {
-    "activeBots": 16,
-    "totalBots": 18
+    "activeBots": 19,
+    "totalBots": 19
   },
   "timestamp": "2026-10-26T14:26:06Z",
   "vps": {
