@@ -163,7 +163,7 @@
     },
     "farmricochet": {
       "dashboardUrl": "https://kbelludoo.github.io/farmricochet-bot/",
-      "engine": "Go Native Engine (Circuit Breaker)",
+      "engine": "Native Rust Zero-GC Engine (Circuit Breaker)",
       "game": "Farm Ricochet",
       "name": "Farm Ricochet Bot",
       "port": 3013,
@@ -561,7 +561,7 @@
     },
     "kaggle": {
       "dashboardUrl": "https://kbelludoo.github.io/agent-go/",
-      "engine": "Go Native Agent (24/7 Watcher)",
+      "engine": "Native Rust Agent (24/7 Watcher)",
       "game": "Kaggle",
       "name": "Kaggle Training Watcher",
       "port": 0,
@@ -569,7 +569,7 @@
     },
     "kickminer": {
       "dashboardUrl": "https://kbelludoo.github.io/kick-miner-go/",
-      "engine": "Go Native (Zero-Video WS)",
+      "engine": "Native Rust (Zero-Video WS)",
       "game": "Kick.com",
       "name": "Kick Channel Points Miner",
       "port": 3009,
@@ -1069,7 +1069,7 @@
     },
     "leveling": {
       "dashboardUrl": "https://kbelludoo.github.io/leveling-bot/",
-      "engine": "Go Native Engine (Protobuf 3)",
+      "engine": "Native Rust Zero-GC Engine (Protobuf 3)",
       "game": "Leveling Idle 2D",
       "name": "Leveling Idle 2D Bot",
       "port": 3003,
@@ -1284,7 +1284,7 @@
     },
     "luxidle": {
       "dashboardUrl": "https://kbelludoo.github.io/luxidle-bot/",
-      "engine": "Go Native Engine (5x Party)",
+      "engine": "Native Rust Zero-GC Engine (5x Party)",
       "game": "Lux Idle",
       "name": "Lux Idle Multi-Bot",
       "port": 3012,
@@ -1491,7 +1491,7 @@
     },
     "pocketweb": {
       "dashboardUrl": "https://kbelludoo.github.io/ai-go-browser/",
-      "engine": "Go Native Browser Engine (\u003c75 MB RAM)",
+      "engine": "Native Rust Browser Engine (\u003c75 MB RAM)",
       "game": "AI-Go-Browser",
       "name": "AI-Go-Browser (Navegador)",
       "port": 8888,
@@ -1503,7 +1503,7 @@
             "kills": 0,
             "name": "AI-Go-Browser Core",
             "status": "Online",
-            "vocation": "Navegador de IA (Go Puro)"
+            "vocation": "Navegador de IA (Rust Puro)"
           }
         ],
         "ramSysMB": 8.5,
@@ -1512,7 +1512,7 @@
     },
     "pokeidle": {
       "dashboardUrl": "https://kbelludoo.github.io/pokeidle-go/",
-      "engine": "Go Native Engine (Twitch Lurker)",
+      "engine": "Native Rust Zero-GC Engine (Twitch Lurker)",
       "game": "PokeIdle.io",
       "name": "PokeIdle.io Bot",
       "port": 3006,
@@ -1556,7 +1556,7 @@
     },
     "pokeidleworld": {
       "dashboardUrl": "https://kbelludoo.github.io/pokeidleworld-bot/",
-      "engine": "Go Native Engine (Auto-Catch)",
+      "engine": "Native Rust Zero-GC Engine (Auto-Catch)",
       "game": "Poke Idle World",
       "name": "Poke Idle World Bot",
       "port": 3007,
@@ -1601,7 +1601,7 @@
     },
     "pokelegacy": {
       "dashboardUrl": "https://kbelludoo.github.io/pokelegacy-bot/",
-      "engine": "Go Native Engine (Party 5x)",
+      "engine": "Native Rust Zero-GC Engine (Party 5x)",
       "game": "PokeLegacy Online",
       "name": "PokeLegacy Online Multi-Bot",
       "port": 3005,
@@ -1781,7 +1781,7 @@
     },
     "pokepixel": {
       "dashboardUrl": "https://kbelludoo.github.io/pokepixel-bot/",
-      "engine": "Go Native Engine (Auto-Catch)",
+      "engine": "Native Rust Zero-GC Engine (Auto-Catch)",
       "game": "PokePixel Online",
       "name": "PokePixel Multi-Bot",
       "port": 3015,
@@ -1835,7 +1835,7 @@
     },
     "poketrue": {
       "dashboardUrl": "https://kbelludoo.github.io/bot-template-rust/?v=force1",
-      "engine": "Go Native Engine (Weakness Solver)",
+      "engine": "Native Rust Zero-GC Engine (Weakness Solver)",
       "game": "PokeTrue",
       "name": "PokeTrue Multi-Bot",
       "port": 3014,
@@ -2121,7 +2121,7 @@
     },
     "telegram": {
       "dashboardUrl": "https://kbelludoo.github.io/agent-go/",
-      "engine": "Go Native Agent (Bot Command)",
+      "engine": "Native Rust Agent (Bot Command)",
       "game": "Telegram",
       "name": "Telegram Relay Agent",
       "port": 0,
@@ -3476,7 +3476,7 @@
     },
     "twitchminer": {
       "dashboardUrl": "https://kbelludoo.github.io/twitch-miner-go/",
-      "engine": "Go Native (Zero-Video WS)",
+      "engine": "Native Rust (Zero-Video WS)",
       "game": "Twitch.tv",
       "name": "Twitch Channel Points Miner",
       "port": 3010,
