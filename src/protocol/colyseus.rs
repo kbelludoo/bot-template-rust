@@ -22,7 +22,8 @@ pub fn parse_colyseus_join_room(frame: &[u8]) -> Result<(String, String, Vec<u8>
         return Err("buffer too short".to_string());
     }
 
-    let reconnection_token = String::from_utf8_lossy(&frame[offset..offset + token_len]).to_string();
+    let reconnection_token =
+        String::from_utf8_lossy(&frame[offset..offset + token_len]).to_string();
     offset += token_len;
 
     let mut serializer_id = String::new();
@@ -34,7 +35,11 @@ pub fn parse_colyseus_join_room(frame: &[u8]) -> Result<(String, String, Vec<u8>
         }
     }
 
-    Ok((reconnection_token, serializer_id, vec![COLYSEUS_OP_JOIN_ROOM]))
+    Ok((
+        reconnection_token,
+        serializer_id,
+        vec![COLYSEUS_OP_JOIN_ROOM],
+    ))
 }
 
 /// Monta o quadro binário OpRoomData (13) com cabeçalho msgpack fixstr/str8 e payload msgpack

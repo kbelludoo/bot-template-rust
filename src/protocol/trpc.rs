@@ -14,10 +14,11 @@ pub fn format_trpc_batch_input<T: Serialize>(input: &T) -> Result<String, serde_
 
 /// Desenvelopa a resposta tRPC v10 `[{"result":{"data":{"json":...}}}]` para o tipo alvo
 pub fn unwrap_trpc_batch_response<T: DeserializeOwned>(body: &str) -> Result<T, String> {
-    let parsed: Value = serde_json::from_str(body)
-        .map_err(|e| format!("resposta tRPC batch malformada: {e}"))?;
+    let parsed: Value =
+        serde_json::from_str(body).map_err(|e| format!("resposta tRPC batch malformada: {e}"))?;
 
-    let arr = parsed.as_array()
+    let arr = parsed
+        .as_array()
         .ok_or_else(|| "resposta tRPC batch não é array".to_string())?;
 
     if arr.is_empty() {
@@ -28,12 +29,21 @@ pub fn unwrap_trpc_batch_response<T: DeserializeOwned>(body: &str) -> Result<T, 
 
     // Verificar se houve erro
     if let Some(err) = first.get("error") {
-        let code = err.get("json").and_then(|j| j.get("code")).and_then(|c| c.as_i64()).unwrap_or(500);
-        let msg = err.get("json").and_then(|j| j.get("message")).and_then(|m| m.as_str()).unwrap_or("erro desconhecido");
+        let code = err
+            .get("json")
+            .and_then(|j| j.get("code"))
+            .and_then(|c| c.as_i64())
+            .unwrap_or(500);
+        let msg = err
+            .get("json")
+            .and_then(|j| j.get("message"))
+            .and_then(|m| m.as_str())
+            .unwrap_or("erro desconhecido");
         return Err(format!("erro tRPC ({code}): {msg}"));
     }
 
-    let json_data = first.get("result")
+    let json_data = first
+        .get("result")
         .and_then(|r| r.get("data"))
         .and_then(|d| d.get("json"))
         .ok_or_else(|| "payload tRPC sem data.json".to_string())?;
@@ -54,7 +64,9 @@ mod tests {
 
     #[test]
     fn test_trpc_roundtrip() {
-        let input = Dummy { message: "hello".to_string() };
+        let input = Dummy {
+            message: "hello".to_string(),
+        };
         let formatted = format_trpc_batch_input(&input).unwrap();
         assert!(formatted.contains("\"0\":{\"json\":{\"message\":\"hello\"}}"));
 

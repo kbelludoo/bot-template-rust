@@ -50,7 +50,9 @@ pub fn disparar_solver_actions(
 
     let tunnel = extrair_ultima_tunnel_url(tunnel_log_path);
     if tunnel.is_empty() {
-        return Err(format!("[{log_id}] nenhuma tunnel URL encontrada em {tunnel_log_path}"));
+        return Err(format!(
+            "[{log_id}] nenhuma tunnel URL encontrada em {tunnel_log_path}"
+        ));
     }
 
     *lock = Some(Instant::now());

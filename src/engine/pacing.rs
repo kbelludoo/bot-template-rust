@@ -27,7 +27,9 @@ impl AdaptiveSpeedTuner {
         let mut d = self.current_delay.write().await;
         // Gradually recover towards base delay
         if *d > self.base_delay {
-            *d = d.saturating_sub(Duration::from_millis(50)).max(self.base_delay);
+            *d = d
+                .saturating_sub(Duration::from_millis(50))
+                .max(self.base_delay);
         }
     }
 

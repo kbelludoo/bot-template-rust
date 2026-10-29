@@ -18,6 +18,12 @@ pub struct BossScheduler {
     bosses: RwLock<Vec<WorldBossEvent>>,
 }
 
+impl Default for BossScheduler {
+    fn default() -> Self {
+        Self::new()
+    }
+}
+
 impl BossScheduler {
     pub fn new() -> Self {
         Self {

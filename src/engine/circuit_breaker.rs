@@ -96,7 +96,10 @@ impl CircuitBreaker {
         let mut s = self.state.write().await;
         if *s == CircuitState::Closed || *s == CircuitState::HalfOpen {
             if *s == CircuitState::HalfOpen {
-                info!("[{}] Recuperação bem-sucedida! Disjuntor rearmado -> CLOSED.", self.name);
+                info!(
+                    "[{}] Recuperação bem-sucedida! Disjuntor rearmado -> CLOSED.",
+                    self.name
+                );
                 *s = CircuitState::Closed;
             }
             *self.failures.write().await = 0;

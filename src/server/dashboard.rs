@@ -63,7 +63,10 @@ impl WebServer {
                 post(|ExtractJson(body): ExtractJson<TicketPayload>| async move {
                     let t = body.token.or(body.ticket).unwrap_or_default();
                     if !t.is_empty() {
-                        info!("🎟️ [Turnstile Relay] Token Turnstile registrado com sucesso (len: {})", t.len());
+                        info!(
+                            "🎟️ [Turnstile Relay] Token Turnstile registrado com sucesso (len: {})",
+                            t.len()
+                        );
                         Json(json!({ "ok": true, "message": "Ticket registrado com sucesso" }))
                     } else {
                         Json(json!({ "ok": false, "error": "Token vazio" }))
@@ -82,7 +85,8 @@ impl WebServer {
 }
 
 async fn dashboard_html() -> impl IntoResponse {
-    Html(r#"<!DOCTYPE html>
+    Html(
+        r#"<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -102,5 +106,6 @@ async fn dashboard_html() -> impl IntoResponse {
         <p>Endpoint da API: <a href="/api/status" style="color: #f0883e;">/api/status</a></p>
     </div>
 </body>
-</html>"#)
+</html>"#,
+    )
 }

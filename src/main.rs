@@ -6,8 +6,8 @@ mod config;
 mod engine;
 mod network;
 mod protocol;
-mod subsystem;
 mod server;
+mod subsystem;
 
 use config::AccountConfig;
 use engine::Supervisor;
