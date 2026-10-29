@@ -1,6 +1,7 @@
 use std::time::Duration;
 use tokio::sync::RwLock;
 
+#[allow(dead_code)]
 pub struct AdaptiveSpeedTuner {
     base_delay: Duration,
     min_delay: Duration,

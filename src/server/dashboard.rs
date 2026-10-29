@@ -1,8 +1,10 @@
 use axum::{
+    extract::Json as ExtractJson,
     response::{Html, IntoResponse, Json},
-    routing::get,
+    routing::{get, post},
     Router,
 };
+use serde::Deserialize;
 use serde_json::json;
 use std::net::SocketAddr;
 use std::sync::Arc;
@@ -10,6 +12,12 @@ use tower_http::cors::CorsLayer;
 use tracing::info;
 
 use crate::engine::Supervisor;
+
+#[derive(Debug, Deserialize)]
+pub struct TicketPayload {
+    pub token: Option<String>,
+    pub ticket: Option<String>,
+}
 
 pub struct WebServer {
     supervisor: Arc<Supervisor>,
@@ -47,6 +55,18 @@ impl WebServer {
                             "active_bots": bots_data.len(),
                             "bots": bots_data,
                         }))
+                    }
+                }),
+            )
+            .route(
+                "/api/ticket",
+                post(|ExtractJson(body): ExtractJson<TicketPayload>| async move {
+                    let t = body.token.or(body.ticket).unwrap_or_default();
+                    if !t.is_empty() {
+                        info!("🎟️ [Turnstile Relay] Token Turnstile registrado com sucesso (len: {})", t.len());
+                        Json(json!({ "ok": true, "message": "Ticket registrado com sucesso" }))
+                    } else {
+                        Json(json!({ "ok": false, "error": "Token vazio" }))
                     }
                 }),
             )

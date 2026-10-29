@@ -4,7 +4,7 @@ use crate::engine::stamina::{StaminaConfig, StaminaController};
 use std::sync::atomic::{AtomicBool, AtomicU64, Ordering};
 use std::sync::Arc;
 use tokio::time::{sleep, Duration};
-use tracing::{error, info, warn};
+use tracing::info;
 
 pub struct BotInstance {
     pub config: AccountConfig,

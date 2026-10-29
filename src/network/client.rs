@@ -1,5 +1,5 @@
 use reqwest::header::{HeaderMap, HeaderValue, USER_AGENT};
-use reqwest::{Client, Response};
+use reqwest::Client;
 use std::time::Duration;
 
 pub struct StealthHttpClient {

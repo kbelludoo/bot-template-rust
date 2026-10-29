@@ -2,3 +2,6 @@
 accounts.json
 *.exe
 *.log
+*.key
+*.pem
+.secrets.json

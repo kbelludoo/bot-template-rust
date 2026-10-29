@@ -1,5 +1,4 @@
 use std::time::Duration;
-use tracing::info;
 
 pub struct SocketClientConfig {
     pub url: String,
