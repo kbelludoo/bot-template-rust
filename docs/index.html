@@ -116,6 +116,35 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
       animation: barShimmer 3s infinite;
     }
+    .host-pill {
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.04em;
+      padding: 2px 7px; border-radius: 6px;
+      background: rgba(0, 240, 255, 0.12); border: 1px solid rgba(0, 240, 255, 0.3);
+      color: var(--accent); font-family: 'JetBrains Mono', monospace;
+    }
+    .ram-breakdown-row {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px;
+    }
+    .ram-pill {
+      font-size: 0.68rem; font-family: 'JetBrains Mono', monospace; font-weight: 600;
+      padding: 3px 8px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px;
+    }
+    .ram-pill.pill-bots {
+      background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.35); color: #38bdf8;
+    }
+    .ram-pill.pill-system {
+      background: rgba(148, 163, 184, 0.12); border: 1px solid rgba(148, 163, 184, 0.3); color: #cbd5e1;
+    }
+    .ram-explain-note {
+      margin-top: 10px; padding: 8px 10px; border-radius: 8px;
+      background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.70rem; line-height: 1.45; color: var(--text-muted);
+    }
+    .ram-explain-note strong { color: #f1f5f9; font-weight: 600; }
+    .ram-explain-note code {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+      background: rgba(255, 255, 255, 0.08); padding: 1px 4px; border-radius: 3px; color: var(--accent);
+    }
 
      
     .bots-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 20px; margin-bottom: 32px; }
@@ -323,20 +352,45 @@
 
     <div class="vps-metrics-grid">
       <div class="vps-card">
-        <div class="vps-label">Serviços em Operação</div>
+        <div class="vps-label" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>Serviços em Operação</span>
+          <span class="host-pill" style="color: var(--green); background: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.3);">SYSTEMD</span>
+        </div>
         <div class="vps-val" id="botsCountVal" style="color: var(--accent);">17 / 18</div>
-        <div class="vps-sub">Bots & Miners conectados 24/7 na VPS</div>
+        <div class="vps-sub">Bots &amp; Miners conectados 24/7 na VPS</div>
+        <div class="ram-breakdown-row" style="margin-top: 14px;">
+          <span class="ram-pill" style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); color: var(--green);">⚡ Rust Zero-GC</span>
+          <span class="ram-pill" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); color: var(--gold);">🔄 Auto-Restart</span>
+        </div>
       </div>
       <div class="vps-card">
-        <div class="vps-label">Memória RAM VPS</div>
+        <div class="vps-label" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>Memória RAM Global VPS</span>
+          <span class="host-pill" title="Métrica global do Host Linux via free -m">HOST LINUX</span>
+        </div>
         <div class="vps-val" id="ramVal" style="color: var(--green);">424 / 951 MB</div>
         <div class="progress-bar"><div class="progress-fill fill-ram" id="ramProgress" style="width: 44%;"></div></div>
-        <div class="vps-sub" id="ramSub">Livre: 527 MB (44% em uso)</div>
+        <div class="vps-sub" id="ramSub">Livre: 527 MB (44% em uso global)</div>
+        <div class="ram-breakdown-row">
+          <span class="ram-pill pill-bots" id="ramBotsPill" title="Memória alocada pelos processos dos bots e serviços">🤖 Processos Bots: ~220 MB</span>
+          <span class="ram-pill pill-system" id="ramSystemPill" title="Kernel Linux, buffers de sockets TCP/IP, systemd, sshd e Oracle Cloud Agent">🐧 SO &amp; Kernel OCI: ~204 MB</span>
+        </div>
+        <div class="ram-explain-note">
+          💡 <strong>Por que a soma dos bots não fecha em 424 MB?</strong><br>
+          Os <code>424 MB</code> medem a RAM total consumida pelo host Linux (via <code>free -m</code>). A diferença além dos processos dos bots é consumida pelo <strong>Kernel Linux</strong> (buffers TCP de dezenas de conexões persistentes), daemons (<code>systemd</code>, <code>journald</code>, <code>sshd</code>) e pelo <strong>Oracle Cloud Agent</strong> da VPS.
+        </div>
       </div>
       <div class="vps-card">
-        <div class="vps-label">Uptime & Conexão</div>
-        <div class="vps-val" style="color: var(--gold); font-size: 1.15rem;">OCI Ashburn</div>
+        <div class="vps-label" style="display: flex; justify-content: space-between; align-items: center;">
+          <span>Uptime & Conexão</span>
+          <span class="host-pill" style="color: var(--gold); background: rgba(245, 158, 11, 0.12); border-color: rgba(245, 158, 11, 0.3);">OCI CLOUD</span>
+        </div>
+        <div class="vps-val" style="color: var(--gold); font-size: 1.5rem; font-family: 'JetBrains Mono', monospace;">OCI Ashburn</div>
         <div class="vps-sub" id="lastUpdatedSub">há 42m51s</div>
+        <div class="ram-breakdown-row" style="margin-top: 14px;">
+          <span class="ram-pill" style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.3); color: var(--cyan);">🌐 Always-Free VM</span>
+          <span class="ram-pill" style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3); color: var(--purple);">🛡️ Zero Latency</span>
+        </div>
       </div>
     </div>
 
@@ -3354,11 +3408,12 @@
           var ramSub = document.getElementById('ramSub');
           if (ramVal) ramVal.textContent = (v.ramUsedMb || 0) + ' / ' + (v.ramTotalMb || 0) + ' MB';
           if (ramProg) ramProg.style.width = (v.ramPercent || 0) + '%';
-          if (ramSub) ramSub.textContent = 'Livre: ' + (v.ramAvailableMb || 0) + ' MB (' + (v.ramPercent || 0) + '% em uso)';
+          if (ramSub) ramSub.textContent = 'Livre: ' + (v.ramAvailableMb || 0) + ' MB (' + (v.ramPercent || 0) + '% em uso global)';
         }
 
         var botKeys = Object.keys(data.bots);
         var activeCount = botKeys.filter(function(k) { return getUnifiedAccounts(data.bots[k]).length > 0; }).length;
+        var totalBotsRamCalculated = 0;
         var botsCountEl = document.getElementById('botsCountVal');
         if (botsCountEl) botsCountEl.textContent = activeCount + ' / ' + botKeys.length;
 
@@ -3521,6 +3576,11 @@
               else if (typeof b.status.ramMB === 'number' && b.status.ramMB > 0) ramMbVal = b.status.ramMB;
               else if (typeof b.status.ramMb === 'number' && b.status.ramMb > 0) ramMbVal = b.status.ramMb;
             }
+            if (ramMbVal > 0) {
+              totalBotsRamCalculated += ramMbVal;
+            } else {
+              totalBotsRamCalculated += (b.engine && b.engine.indexOf('Rust') !== -1 ? 2.5 : 12.0);
+            }
             var ramDisplay = ramMbVal > 0 ? (ramMbVal < 10 ? ramMbVal.toFixed(1) : Math.round(ramMbVal * 10) / 10) + ' MB' : (b.engine && b.engine.indexOf('Rust') !== -1 ? '< 10 MB' : '12 MB');
 
             var cpuDisplay = '0.1%';
@@ -3537,6 +3597,16 @@
 
             summaryEl.innerHTML = '<span class="gold-val">' + goldDisplay + '</span> • <span class="ram-val">RAM: ' + ramDisplay + '</span> • <span class="cpu-val">CPU: ' + cpuDisplay + '</span>';
           }
+        }
+
+        var ramBotsPill = document.getElementById('ramBotsPill');
+        var ramSystemPill = document.getElementById('ramSystemPill');
+        if (ramBotsPill && ramSystemPill && data.vps) {
+          var bRam = Math.round(totalBotsRamCalculated);
+          var hostUsed = data.vps.ramUsedMb || 424;
+          var sRam = Math.max(0, hostUsed - bRam);
+          ramBotsPill.textContent = '🤖 Bots Ativos: ~' + bRam + ' MB';
+          ramSystemPill.textContent = '🐧 SO & Kernel OCI: ~' + sRam + ' MB';
         }
       } catch (e) {
         console.warn('Erro ao atualizar hub:', e);
