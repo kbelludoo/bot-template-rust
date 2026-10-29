@@ -1276,11 +1276,42 @@
     },
     "lichess": {
       "dashboardUrl": "https://lichess.org/@/kbelludoo",
-      "engine": "Go 1.27 + Stockfish 17.1 NNUE",
+      "engine": "Native Rust Zero-GC Engine + Stockfish 19 NNUE",
       "game": "Lichess.org",
       "name": "Lichess Bot (Berserk)",
       "port": 3016,
-      "status": null
+      "status": {
+        "online": true,
+        "key": "lichess",
+        "name": "Lichess Bot (Berserk)",
+        "game": "Lichess.org • Rust + Stockfish NNUE",
+        "port": 3016,
+        "bot_user": "kbelludoo",
+        "title": "BOT",
+        "mode": "berserk",
+        "active_games": 0,
+        "games_played": 43,
+        "wins": 0,
+        "losses": 34,
+        "moves_played": 645,
+        "last_move": "f4e3",
+        "last_eval": "+1.85 (Stockfish 19 NNUE)",
+        "last_opp": "ArroccoBot",
+        "db_symbols": 32703,
+        "idle_learner": {
+          "enabled": true,
+          "is_idle": true,
+          "status": "?? Ocioso — Monitorando Lichess TV e Partidas de Grandes Mestres",
+          "current_source": "Lichess TV / Top GMs",
+          "games_learned": 46,
+          "moves_learned": 452,
+          "last_game_desc": "[Lichess TV (best)] TonyGazzo (2882) venceu Mikkel_Vinh (3112)",
+          "total_symbols": 32703
+        },
+        "uptime_sec": 30511,
+        "ram_mb": "6.80 MB",
+        "dashboard": "https://lichess.org/@/kbelludoo"
+      }
     },
     "luxidle": {
       "dashboardUrl": "https://kbelludoo.github.io/luxidle-bot/",
