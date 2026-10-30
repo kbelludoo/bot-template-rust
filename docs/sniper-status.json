@@ -34,9 +34,9 @@
       "boot_volume_gb": 100,
       "status": "hunting",
       "statusMessage": "Monitorando Datacenter São Paulo AD-1",
-      "totalAttempts": 1,
-      "lastAttemptTime": "22:31:47",
-      "lastResult": "Tentativa #1: Capacidade cheia. Próxima checagem em 71s...",
+      "totalAttempts": 8,
+      "lastAttemptTime": "22:41:42",
+      "lastResult": "Tentativa #8: Capacidade cheia. Próxima checagem em 108s...",
       "ads": [
         "SA-SAOPAULO-1-AD-1"
       ],
@@ -44,6 +44,48 @@
     }
   },
   "logs": [
+    {
+      "time": "22:41:42",
+      "region": "saopaulo",
+      "level": "INFO",
+      "message": "Tentativa #8: Capacidade cheia. Próxima checagem em 108s..."
+    },
+    {
+      "time": "22:40:19",
+      "region": "saopaulo",
+      "level": "INFO",
+      "message": "Tentativa #7: Capacidade cheia. Próxima checagem em 82s..."
+    },
+    {
+      "time": "22:38:55",
+      "region": "saopaulo",
+      "level": "INFO",
+      "message": "Tentativa #6: Capacidade cheia. Próxima checagem em 83s..."
+    },
+    {
+      "time": "22:37:24",
+      "region": "saopaulo",
+      "level": "INFO",
+      "message": "Tentativa #5: Capacidade cheia. Próxima checagem em 89s..."
+    },
+    {
+      "time": "22:35:53",
+      "region": "saopaulo",
+      "level": "INFO",
+      "message": "Tentativa #4: Capacidade cheia. Próxima checagem em 90s..."
+    },
+    {
+      "time": "22:34:10",
+      "region": "saopaulo",
+      "level": "INFO",
+      "message": "Tentativa #3: Capacidade cheia. Próxima checagem em 102s..."
+    },
+    {
+      "time": "22:32:59",
+      "region": "saopaulo",
+      "level": "INFO",
+      "message": "Tentativa #2: Capacidade cheia. Próxima checagem em 69s..."
+    },
     {
       "time": "22:31:47",
       "region": "saopaulo",
