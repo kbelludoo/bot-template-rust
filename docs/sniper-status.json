@@ -16,7 +16,11 @@
       "totalAttempts": 21,
       "lastAttemptTime": "22:11:22",
       "lastResult": "Out of host capacity (Aguardando liberação de vaga física)",
-      "ads": ["US-ASHBURN-AD-1", "US-ASHBURN-AD-2", "US-ASHBURN-AD-3"],
+      "ads": [
+        "US-ASHBURN-AD-1",
+        "US-ASHBURN-AD-2",
+        "US-ASHBURN-AD-3"
+      ],
       "createdInstance": null
     },
     "saopaulo": {
@@ -30,14 +34,22 @@
       "boot_volume_gb": 100,
       "status": "hunting",
       "statusMessage": "Monitorando Datacenter São Paulo AD-1",
-      "totalAttempts": 5,
-      "lastAttemptTime": "22:11:27",
-      "lastResult": "Out of host capacity (Aguardando liberação de vaga física)",
-      "ads": ["SA-SAOPAULO-1-AD-1"],
+      "totalAttempts": 1,
+      "lastAttemptTime": "22:31:47",
+      "lastResult": "Tentativa #1: Capacidade cheia. Próxima checagem em 71s...",
+      "ads": [
+        "SA-SAOPAULO-1-AD-1"
+      ],
       "createdInstance": null
     }
   },
   "logs": [
+    {
+      "time": "22:31:47",
+      "region": "saopaulo",
+      "level": "INFO",
+      "message": "Tentativa #1: Capacidade cheia. Próxima checagem em 71s..."
+    },
     {
       "time": "22:11:27",
       "region": "saopaulo",
