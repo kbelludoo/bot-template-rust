@@ -51,7 +51,12 @@ impl GameMonitor {
         let prev_level = self.last_level.load(Ordering::Relaxed);
 
         // Primeiro registro inicial
-        if prev_gold == 0 && prev_exp == 0 && prev_stamina == 0 && prev_kills == 0 && prev_level == 0 {
+        if prev_gold == 0
+            && prev_exp == 0
+            && prev_stamina == 0
+            && prev_kills == 0
+            && prev_level == 0
+        {
             self.last_gold.store(current.gold, Ordering::Relaxed);
             self.last_exp.store(current.exp, Ordering::Relaxed);
             self.last_stamina.store(current.stamina, Ordering::Relaxed);
@@ -70,7 +75,8 @@ impl GameMonitor {
         let kills_changed = current.kills != prev_kills;
         let level_changed = current.level != prev_level;
 
-        let has_activity = gold_changed || exp_changed || stamina_changed || kills_changed || level_changed;
+        let has_activity =
+            gold_changed || exp_changed || stamina_changed || kills_changed || level_changed;
 
         if has_activity {
             // Houve movimento real no jogo! Resetamos o monitor de inércia
@@ -110,7 +116,10 @@ impl GameMonitor {
             );
 
             if !was_stalled {
-                warn!("⚠️ [GameMonitor] [STALL DETECTADO] [{}] {}", self.account_id, reason);
+                warn!(
+                    "⚠️ [GameMonitor] [STALL DETECTADO] [{}] {}",
+                    self.account_id, reason
+                );
             }
             if let Ok(mut r) = self.stall_reason.lock() {
                 *r = Some(reason);
@@ -165,7 +174,10 @@ mod tests {
         // 2. Dorme 1.2 segundos mantendo os números rigorosamente iguais
         sleep(Duration::from_millis(1200));
         let stalled = monitor.record_metrics(initial);
-        assert!(stalled, "Deveria acusar forte indício de bot parado por números estáticos");
+        assert!(
+            stalled,
+            "Deveria acusar forte indício de bot parado por números estáticos"
+        );
         assert!(monitor.is_stalled());
         assert!(monitor.stall_reason().is_some());
 
@@ -175,7 +187,10 @@ mod tests {
             ..initial
         };
         let still_stalled = monitor.record_metrics(hunted);
-        assert!(!still_stalled, "Deveria desarmar o stall pois um número diminuiu");
+        assert!(
+            !still_stalled,
+            "Deveria desarmar o stall pois um número diminuiu"
+        );
         assert!(!monitor.is_stalled());
         assert!(monitor.stall_reason().is_none());
 
@@ -185,6 +200,9 @@ mod tests {
             stamina: 99,
             ..initial
         };
-        assert!(!monitor.record_metrics(bought), "Mudança de gold deve resetar inércia");
+        assert!(
+            !monitor.record_metrics(bought),
+            "Mudança de gold deve resetar inércia"
+        );
     }
 }

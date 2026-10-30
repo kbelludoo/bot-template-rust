@@ -1,0 +1,66 @@
+{
+  "updated_at": "2026-10-30T01:12:00Z",
+  "status": "running",
+  "regions": {
+    "ashburn": {
+      "region": "us-ashburn-1",
+      "flag": "🇺🇸",
+      "displayName": "Ashburn (US East)",
+      "profile": "DEFAULT",
+      "shape": "VM.Standard.A1.Flex",
+      "ocpus": 2.0,
+      "ram_gb": 12.0,
+      "boot_volume_gb": 100,
+      "status": "hunting",
+      "statusMessage": "Monitorando AD-1, AD-2 e AD-3 com Jitter Inteligente",
+      "totalAttempts": 21,
+      "lastAttemptTime": "22:11:22",
+      "lastResult": "Out of host capacity (Aguardando liberação de vaga física)",
+      "ads": ["US-ASHBURN-AD-1", "US-ASHBURN-AD-2", "US-ASHBURN-AD-3"],
+      "createdInstance": null
+    },
+    "saopaulo": {
+      "region": "sa-saopaulo-1",
+      "flag": "🇧🇷",
+      "displayName": "São Paulo (BR East)",
+      "profile": "SAOPAULO",
+      "shape": "VM.Standard.A1.Flex",
+      "ocpus": 2.0,
+      "ram_gb": 12.0,
+      "boot_volume_gb": 100,
+      "status": "hunting",
+      "statusMessage": "Monitorando Datacenter São Paulo AD-1",
+      "totalAttempts": 5,
+      "lastAttemptTime": "22:11:27",
+      "lastResult": "Out of host capacity (Aguardando liberação de vaga física)",
+      "ads": ["SA-SAOPAULO-1-AD-1"],
+      "createdInstance": null
+    }
+  },
+  "logs": [
+    {
+      "time": "22:11:27",
+      "region": "saopaulo",
+      "level": "INFO",
+      "message": "Tentativa #5 em SA-SAOPAULO-1-AD-1: Capacidade cheia. Próxima checagem em 139s..."
+    },
+    {
+      "time": "22:11:22",
+      "region": "ashburn",
+      "level": "INFO",
+      "message": "Tentativa #21: AD-1, AD-2, AD-3 sem vagas no momento. Próxima checagem em 107s..."
+    },
+    {
+      "time": "22:09:21",
+      "region": "saopaulo",
+      "level": "INFO",
+      "message": "Tentativa #4 em SA-SAOPAULO-1-AD-1: Capacidade cheia. Jitter ativo (124s)..."
+    },
+    {
+      "time": "22:08:58",
+      "region": "ashburn",
+      "level": "INFO",
+      "message": "Tentativa #20: Ordem de ADs alternada. Próxima checagem em 117s..."
+    }
+  ]
+}

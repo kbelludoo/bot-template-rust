@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oracle Cloud ARM Sniper | Live Telemetry & Control</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0d14;
+      --card-bg: #111622;
+      --card-border: #1f293d;
+      --accent-cyan: #00f0ff;
+      --accent-green: #00ff88;
+      --accent-amber: #ffb703;
+      --accent-purple: #9d4edd;
+      --text-main: #f0f4fc;
+      --text-muted: #8b9bb4;
+      --text-dim: #4d5d78;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      padding: 24px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 28px;
+      gap: 16px;
+    }
+
+    .title-group h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .title-group p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 4px;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #182235;
+      color: var(--accent-cyan);
+      border: 1px solid #283854;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: #22324f;
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 12px rgba(0, 240, 255, 0.2);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .sniper-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .sniper-card:hover {
+      border-color: #314468;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .region-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .region-flag {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .region-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .region-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .badge-hunting {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 183, 3, 0.12);
+      color: var(--accent-amber);
+      border: 1px solid rgba(255, 183, 3, 0.3);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-hunting::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-amber);
+      animation: pulse 1.5s infinite;
+    }
+
+    .badge-active {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 255, 136, 0.12);
+      color: var(--accent-green);
+      border: 1px solid rgba(0, 255, 136, 0.3);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-active::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid #1a2336;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 16px 0;
+      text-align: center;
+    }
+
+    .spec-item .label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .spec-item .val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-top: 2px;
+    }
+
+    .meta-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.85rem;
+      margin-top: 16px;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dashed #1a2336;
+      padding-bottom: 6px;
+    }
+
+    .meta-row .label {
+      color: var(--text-muted);
+    }
+
+    .meta-row .value {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .status-box {
+      margin-top: 16px;
+      background: #0d121c;
+      border-left: 3px solid var(--accent-cyan);
+      padding: 10px 14px;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.82rem;
+    }
+
+    .status-box .title {
+      font-weight: 700;
+      color: var(--accent-cyan);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+    }
+
+    .status-box .text {
+      color: #b0c4de;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .terminal-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .terminal-header {
+      background: #171f2d;
+      padding: 12px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .terminal-header .dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .dot.red { background: #ff5f56; }
+    .dot.yellow { background: #ffbd2e; }
+    .dot.green { background: #27c93f; }
+
+    .terminal-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .terminal-body {
+      background: #07090e;
+      padding: 18px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.82rem;
+      min-height: 220px;
+      max-height: 340px;
+      overflow-y: auto;
+      color: #9cdcfe;
+      line-height: 1.6;
+    }
+
+    .log-line {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .log-time {
+      color: #569cd6;
+    }
+
+    .log-region {
+      color: var(--accent-amber);
+      font-weight: 700;
+    }
+
+    .log-msg {
+      color: #d4d4d4;
+    }
+
+    .how-it-works {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .how-it-works h2 {
+      font-size: 1.25rem;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .step-card {
+      background: #0d121c;
+      border: 1px solid #1a2336;
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .step-num {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: var(--accent-cyan);
+      color: #000;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      font-weight: 800;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+
+    .step-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer {
+      margin-top: 32px;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.8rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="title-group">
+        <h1>🛡️ Oracle Cloud ARM Sniper Suite</h1>
+        <p>Monitoramento contínuo em Rust & Python para captura de instâncias Always Free Ampere A1 (2 OCPUs / 12 GB RAM)</p>
+      </div>
+      <div>
+        <a href="index.html" class="nav-btn">← Voltar ao Command Center</a>
+      </div>
+    </header>
+
+    <div class="grid-2">
+      <!-- Card Ashburn -->
+      <div class="sniper-card" id="card-ashburn">
+        <div class="card-top">
+          <div class="region-info">
+            <span class="region-flag">🇺🇸</span>
+            <div>
+              <div class="region-name">Ashburn (US East)</div>
+              <div class="region-code">us-ashburn-1</div>
+            </div>
+          </div>
+          <span class="badge-hunting" id="badge-ashburn">Sniper Ativo</span>
+        </div>
+
+        <div class="spec-grid">
+          <div class="spec-item">
+            <div class="label">OCPUs</div>
+            <div class="val">2.0</div>
+          </div>
+          <div class="spec-item">
+            <div class="label">RAM</div>
+            <div class="val">12 GB</div>
+          </div>
+          <div class="spec-item">
+            <div class="label">SSD NVMe</div>
+            <div class="val">100 GB</div>
+          </div>
+          <div class="spec-item">
+            <div class="label">Arquitetura</div>
+            <div class="val">ARM64</div>
+          </div>
+        </div>
+
+        <div class="meta-list">
+          <div class="meta-row">
+            <span class="label">Shape Oracle:</span>
+            <span class="value">VM.Standard.A1.Flex</span>
+          </div>
+          <div class="meta-row">
+            <span class="label">Domínios Monitorados:</span>
+            <span class="value">AD-1, AD-2, AD-3 (Ordem Aleatória)</span>
+          </div>
+          <div class="meta-row">
+            <span class="label">Intervalo de Varredura:</span>
+            <span class="value">90s - 140s (Anti-Ban Jitter)</span>
+          </div>
+          <div class="meta-row">
+            <span class="label">Total de Tentativas:</span>
+            <span class="value" id="attempts-ashburn">18</span>
+          </div>
+          <div class="meta-row">
+            <span class="label">Última Checagem:</span>
+            <span class="value" id="last-time-ashburn">22:03:45</span>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="title">Status do Datacenter:</div>
+          <div class="text" id="status-text-ashburn">Out of host capacity (Aguardando liberação de vaga física)</div>
+        </div>
+      </div>
+
+      <!-- Card São Paulo -->
+      <div class="sniper-card" id="card-saopaulo">
+        <div class="card-top">
+          <div class="region-info">
+            <span class="region-flag">🇧🇷</span>
+            <div>
+              <div class="region-name">São Paulo (BR East)</div>
+              <div class="region-code">sa-saopaulo-1</div>
+            </div>
+          </div>
+          <span class="badge-hunting" id="badge-saopaulo">Sniper Ativo</span>
+        </div>
+
+        <div class="spec-grid">
+          <div class="spec-item">
+            <div class="label">OCPUs</div>
+            <div class="val">2.0</div>
+          </div>
+          <div class="spec-item">
+            <div class="label">RAM</div>
+            <div class="val">12 GB</div>
+          </div>
+          <div class="spec-item">
+            <div class="label">SSD NVMe</div>
+            <div class="val">100 GB</div>
+          </div>
+          <div class="spec-item">
+            <div class="label">Arquitetura</div>
+            <div class="val">ARM64</div>
+          </div>
+        </div>
+
+        <div class="meta-list">
+          <div class="meta-row">
+            <span class="label">Shape Oracle:</span>
+            <span class="value">VM.Standard.A1.Flex</span>
+          </div>
+          <div class="meta-row">
+            <span class="label">Domínio Monitorado:</span>
+            <span class="value">SA-SAOPAULO-1-AD-1</span>
+          </div>
+          <div class="meta-row">
+            <span class="label">Intervalo de Varredura:</span>
+            <span class="value">90s - 140s (Anti-Ban Jitter)</span>
+          </div>
+          <div class="meta-row">
+            <span class="label">Total de Tentativas:</span>
+            <span class="value" id="attempts-saopaulo">2</span>
+          </div>
+          <div class="meta-row">
+            <span class="label">Última Checagem:</span>
+            <span class="value" id="last-time-saopaulo">22:03:11</span>
+          </div>
+        </div>
+
+        <div class="status-box">
+          <div class="title">Status do Datacenter:</div>
+          <div class="text" id="status-text-saopaulo">Out of host capacity (Aguardando liberação de vaga física)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terminal Section -->
+    <div class="terminal-section">
+      <div class="terminal-header">
+        <div class="dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="terminal-title">live_sniper_telemetry.log — Auto-Sync (5s)</div>
+        <div style="font-size: 0.75rem; color: #569cd6;" id="sync-indicator">🟢 SINCRONIZADO</div>
+      </div>
+      <div class="terminal-body" id="terminal-feed">
+        <div class="log-line">
+          <span class="log-time">[22:03:11]</span>
+          <span class="log-region">[SAOPAULO]</span>
+          <span class="log-msg">Tentativa #1 em SA-SAOPAULO-1-AD-1: Capacidade cheia. Próxima checagem em 122s...</span>
+        </div>
+        <div class="log-line">
+          <span class="log-time">[22:01:50]</span>
+          <span class="log-region">[ASHBURN]</span>
+          <span class="log-msg">Tentativa #16: AD-1, AD-2, AD-3 sem vagas no momento. Próxima checagem em 124s...</span>
+        </div>
+        <div class="log-line">
+          <span class="log-time">[21:59:51]</span>
+          <span class="log-region">[ASHBURN]</span>
+          <span class="log-msg">Tentativa #15: Capacidade cheia nos 3 domínios. Jitter ativo (140s)...</span>
+        </div>
+        <div class="log-line">
+          <span class="log-time">[21:57:11]</span>
+          <span class="log-region">[ASHBURN]</span>
+          <span class="log-msg">Tentativa #14: ADs verificados em ordem aleatória (anti-fingerprinting).</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="how-it-works">
+      <h2>⚙️ Como Funciona o Sniper com Proteção Anti-Rate-Limit</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-title">Jitter Humano & Stealth</div>
+          <div class="step-desc">Cada ciclo de requisição aguarda um intervalo pseudo-aleatório entre 90s e 140s. Isso evita os bloqueios por HTTP 429 (TooManyRequests).</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-title">Rotação Dinâmica de ADs</div>
+          <div class="step-desc">Em Ashburn (3 domínios de disponibilidade), o robô embaralha os ADs antes de cada ciclo com pausas de 4 a 8 segundos entre requisições.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-title">Disparo Instantâneo</div>
+          <div class="step-desc">Assim que qualquer outro usuário desativar ou liberar uma máquina ARM A1, a requisição é aceita e o disco SSD NVMe de 100 GB é vinculado na hora.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-title">Auto-Setup & Notificação</div>
+          <div class="step-desc">Ao confirmar o status RUNNING, o script extrai o IP público alocado e atualiza esta página instantaneamente com o status verde.</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Oracle Cloud ARM Sniper Suite • Powered by Rust Zero-GC Engine & OCI REST API • Auto-Updated
+    </footer>
+  </div>
+
+  <script>
+    async function updateTelemetry() {
+      try {
+        const res = await fetch('sniper-status.json?t=' + Date.now());
+        if (!res.ok) return;
+        const data = await res.json();
+
+        // Ashburn
+        if (data.regions && data.regions.ashburn) {
+          const ash = data.regions.ashburn;
+          document.getElementById('attempts-ashburn').textContent = ash.totalAttempts || 0;
+          document.getElementById('last-time-ashburn').textContent = ash.lastAttemptTime || '-';
+          if (ash.lastResult) {
+            document.getElementById('status-text-ashburn').textContent = ash.lastResult;
+          }
+          if (ash.createdInstance) {
+            const badge = document.getElementById('badge-ashburn');
+            badge.className = 'badge-active';
+            badge.textContent = 'VPS ONLINE: ' + ash.createdInstance.public_ip;
+          }
+        }
+
+        // São Paulo
+        if (data.regions && data.regions.saopaulo) {
+          const sp = data.regions.saopaulo;
+          document.getElementById('attempts-saopaulo').textContent = sp.totalAttempts || 0;
+          document.getElementById('last-time-saopaulo').textContent = sp.lastAttemptTime || '-';
+          if (sp.lastResult) {
+            document.getElementById('status-text-saopaulo').textContent = sp.lastResult;
+          }
+          if (sp.createdInstance) {
+            const badge = document.getElementById('badge-saopaulo');
+            badge.className = 'badge-active';
+            badge.textContent = 'VPS ONLINE: ' + sp.createdInstance.public_ip;
+          }
+        }
+
+        // Logs
+        if (data.logs && data.logs.length > 0) {
+          const feed = document.getElementById('terminal-feed');
+          feed.innerHTML = data.logs.map(l => `
+            <div class="log-line">
+              <span class="log-time">[${l.time}]</span>
+              <span class="log-region">[${(l.region || '').toUpperCase()}]</span>
+              <span class="log-msg">${l.message}</span>
+            </div>
+          `).join('');
+        }
+
+        document.getElementById('sync-indicator').textContent = '🟢 SINCRONIZADO: ' + new Date().toLocaleTimeString();
+      } catch (e) {
+        console.warn('Erro ao atualizar telemetria:', e);
+      }
+    }
+
+    setInterval(updateTelemetry, 5000);
+    updateTelemetry();
+  </script>
+</body>
+</html>
