@@ -10,41 +10,41 @@
         "accounts": [
           {
             "cb_state": "Closed",
-            "exp": 8845000,
+            "exp": 257500,
             "fatigue": 0.0,
-            "gold": 650948706,
+            "gold": 647757275,
             "id": "acc-1",
-            "kills": 3538,
+            "kills": 103,
             "name": "Conta 1 - mister k",
             "running": true
           },
           {
             "cb_state": "Closed",
-            "exp": 8837500,
+            "exp": 260000,
             "fatigue": 0.0,
-            "gold": 273017556,
+            "gold": 267871056,
             "id": "acc-2",
-            "kills": 3535,
+            "kills": 104,
             "name": "Conta 2 - mister k",
             "running": true
           },
           {
             "cb_state": "Closed",
-            "exp": 8837500,
+            "exp": 255000,
             "fatigue": 0.0,
-            "gold": 22315635,
+            "gold": 17166135,
             "id": "acc-3",
-            "kills": 3535,
+            "kills": 102,
             "name": "Conta 3 - mister k",
             "running": true
           },
           {
             "cb_state": "Closed",
-            "exp": 8837500,
+            "exp": 250000,
             "fatigue": 0.0,
-            "gold": 154273835,
+            "gold": 149121335,
             "id": "acc-4",
-            "kills": 3535,
+            "kills": 100,
             "name": "Conta 4 - CHEREMOZOVU",
             "running": true
           }
@@ -53,7 +53,7 @@
         "game": "Baiak Idle",
         "port": 8090,
         "total_accounts": 4,
-        "uptime_sec": 5540
+        "uptime_sec": 162
       }
     },
     "farmricochet": {
@@ -66,7 +66,7 @@
         "accounts": [
           {
             "currentArea": "Fase: level-1",
-            "durationSec": 33349,
+            "durationSec": 351,
             "expPerHour": 4618.3,
             "gold": 0,
             "hp": 572,
@@ -93,8 +93,8 @@
         "ramAllocMB": 1.45,
         "ramSysMB": 3.8,
         "total_accounts": 1,
-        "uptime": "33349s",
-        "uptime_sec": 33349
+        "uptime": "351s",
+        "uptime_sec": 351
       }
     },
     "huntera": {
@@ -150,7 +150,7 @@
         "game": "Huntera Idle",
         "port": 3000,
         "total_accounts": 4,
-        "uptime_sec": 37
+        "uptime_sec": 10599
       }
     },
     "kickminer": {
@@ -160,15 +160,15 @@
       "name": "Kick Channel Points Miner",
       "port": 3009,
       "status": {
-        "uptime": "28:42:53",
-        "ram_mb": 9.296875,
+        "uptime": "31:38:54",
+        "ram_mb": 9.44921875,
         "goroutines": 2,
         "total_streams": 12,
         "accounts": {
           "KbElLuDoO": {
             "username": "KbElLuDoO",
             "active_streams": 12,
-            "total_points": 71910,
+            "total_points": 76630,
             "streamers": {
               "sketch": {
                 "streamer": "sketch",
@@ -194,13 +194,21 @@
                 "points": 0,
                 "watch_time": ""
               },
+              "junninhofut": {
+                "streamer": "junninhofut",
+                "is_live": true,
+                "watching": true,
+                "auto_fill": true,
+                "points": 0,
+                "watch_time": "0:53:33"
+              },
               "sheviii2k": {
                 "streamer": "sheviii2k",
                 "is_live": true,
                 "watching": true,
                 "auto_fill": false,
-                "points": 2620,
-                "watch_time": "13:50:59"
+                "points": 2640,
+                "watch_time": "16:47:00"
               },
               "dirrty": {
                 "streamer": "dirrty",
@@ -247,8 +255,8 @@
                 "is_live": true,
                 "watching": true,
                 "auto_fill": false,
-                "points": 2350,
-                "watch_time": "7:40:23"
+                "points": 2370,
+                "watch_time": "10:36:24"
               },
               "sxb": {
                 "streamer": "sxb",
@@ -257,6 +265,14 @@
                 "auto_fill": false,
                 "points": 0,
                 "watch_time": ""
+              },
+              "ovelheram": {
+                "streamer": "ovelheram",
+                "is_live": true,
+                "watching": true,
+                "auto_fill": true,
+                "points": 10,
+                "watch_time": "0:52:50"
               },
               "velho_p": {
                 "streamer": "velho_p",
@@ -287,24 +303,32 @@
                 "is_live": false,
                 "watching": true,
                 "auto_fill": true,
-                "points": 790,
-                "watch_time": "5:45:33"
+                "points": 920,
+                "watch_time": "8:41:35"
               },
               "biscoitao": {
                 "streamer": "biscoitao",
+                "is_live": false,
+                "watching": false,
+                "auto_fill": true,
+                "points": 100,
+                "watch_time": ""
+              },
+              "iceinmyvein": {
+                "streamer": "iceinmyvein",
                 "is_live": true,
                 "watching": true,
                 "auto_fill": true,
-                "points": 90,
-                "watch_time": "7:09:33"
+                "points": 0,
+                "watch_time": "1:12:18"
               },
               "gaules": {
                 "streamer": "gaules",
                 "is_live": true,
                 "watching": true,
                 "auto_fill": false,
-                "points": 15140,
-                "watch_time": "15:08:16"
+                "points": 15160,
+                "watch_time": "18:04:18"
               },
               "onezeratv": {
                 "streamer": "onezeratv",
@@ -343,8 +367,8 @@
                 "is_live": true,
                 "watching": true,
                 "auto_fill": false,
-                "points": 3090,
-                "watch_time": "19:17:17"
+                "points": 3110,
+                "watch_time": "22:13:18"
               },
               "nickmercs": {
                 "streamer": "nickmercs",
@@ -389,18 +413,18 @@
               "rodil": {
                 "streamer": "rodil",
                 "is_live": false,
-                "watching": false,
+                "watching": true,
                 "auto_fill": true,
                 "points": 2830,
-                "watch_time": ""
+                "watch_time": "0:03:18"
               },
               "mizkif": {
                 "streamer": "mizkif",
-                "is_live": true,
-                "watching": true,
+                "is_live": false,
+                "watching": false,
                 "auto_fill": false,
-                "points": 6200,
-                "watch_time": "1:11:09"
+                "points": 6300,
+                "watch_time": ""
               },
               "zurtado18": {
                 "streamer": "zurtado18",
@@ -413,10 +437,10 @@
               "gtzinholives": {
                 "streamer": "gtzinholives",
                 "is_live": false,
-                "watching": false,
+                "watching": true,
                 "auto_fill": true,
-                "points": 450,
-                "watch_time": ""
+                "points": 630,
+                "watch_time": "1:58:50"
               },
               "coachturtle": {
                 "streamer": "coachturtle",
@@ -452,11 +476,11 @@
               },
               "jotajogadas": {
                 "streamer": "jotajogadas",
-                "is_live": true,
-                "watching": true,
+                "is_live": false,
+                "watching": false,
                 "auto_fill": true,
                 "points": 0,
-                "watch_time": "0:35:04"
+                "watch_time": ""
               },
               "spiderkong": {
                 "streamer": "spiderkong",
@@ -464,6 +488,14 @@
                 "watching": false,
                 "auto_fill": true,
                 "points": 110,
+                "watch_time": ""
+              },
+              "mendigobillrp": {
+                "streamer": "mendigobillrp",
+                "is_live": false,
+                "watching": false,
+                "auto_fill": true,
+                "points": 0,
                 "watch_time": ""
               },
               "yulla": {
@@ -604,11 +636,11 @@
               },
               "matta": {
                 "streamer": "matta",
-                "is_live": true,
-                "watching": true,
+                "is_live": false,
+                "watching": false,
                 "auto_fill": false,
-                "points": 11270,
-                "watch_time": "0:56:17"
+                "points": 11290,
+                "watch_time": ""
               },
               "roshtein": {
                 "streamer": "roshtein",
@@ -620,11 +652,11 @@
               },
               "amouranth": {
                 "streamer": "amouranth",
-                "is_live": false,
-                "watching": false,
+                "is_live": true,
+                "watching": true,
                 "auto_fill": false,
-                "points": 0,
-                "watch_time": ""
+                "points": 4050,
+                "watch_time": "2:23:00"
               },
               "soerrotv": {
                 "streamer": "soerrotv",
@@ -664,7 +696,7 @@
                 "watching": true,
                 "auto_fill": false,
                 "points": 0,
-                "watch_time": "0:09:03"
+                "watch_time": "3:05:04"
               },
               "xdaren_": {
                 "streamer": "xdaren_",
@@ -684,11 +716,11 @@
               },
               "baianotv": {
                 "streamer": "baianotv",
-                "is_live": true,
-                "watching": true,
+                "is_live": false,
+                "watching": false,
                 "auto_fill": false,
                 "points": 0,
-                "watch_time": "7:39:45"
+                "watch_time": ""
               },
               "maellen": {
                 "streamer": "maellen",
@@ -720,6 +752,14 @@
                 "watching": false,
                 "auto_fill": true,
                 "points": 250,
+                "watch_time": ""
+              },
+              "moraismta": {
+                "streamer": "moraismta",
+                "is_live": false,
+                "watching": false,
+                "auto_fill": true,
+                "points": 140,
                 "watch_time": ""
               },
               "jynxzi": {
@@ -852,11 +892,11 @@
               },
               "kyootbot": {
                 "streamer": "kyootbot",
-                "is_live": true,
-                "watching": true,
+                "is_live": false,
+                "watching": false,
                 "auto_fill": true,
                 "points": 150,
-                "watch_time": "0:32:03"
+                "watch_time": ""
               },
               "kazuhasama": {
                 "streamer": "kazuhasama",
@@ -870,106 +910,106 @@
           }
         },
         "logs": [
-          "[02:28:57] [KbElLuDoO] 'coringa' live balance updated to 970 pts (+10 credited)!",
-          "[02:28:58] [KbElLuDoO] Connected to 'jotajogadas' live! Current balance: 0 pts (+10 every 5m).",
-          "[02:28:58] [KbElLuDoO] 'sheviii2k' live balance updated to 2620 pts (+10 credited)!",
-          "[02:31:37] [KbElLuDoO] 'gaules' live balance updated to 15140 pts (+10 credited)!",
-          "[02:31:41] [KbElLuDoO] 'baianotv' live balance updated to 0 pts (+10 credited)!",
-          "[02:31:41] [KbElLuDoO] 'coringa' stream ended; slot freed.",
-          "[02:31:43] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
-          "[02:31:58] [KbElLuDoO] Starting watcher for 'kyootbot' [auto-fill].",
-          "[02:31:59] [KbElLuDoO] Connected to 'kyootbot' live! Current balance: 150 pts (+10 every 5m).",
-          "[02:32:11] [KbElLuDoO] 'cogu' live balance updated to 3070 pts (+10 credited)!",
-          "[02:32:45] [KbElLuDoO] 'matta' live balance updated to 11250 pts (+10 credited)!",
-          "[02:32:52] [KbElLuDoO] 'mizkif' live balance updated to 6160 pts (+10 credited)!",
-          "[02:33:02] [KbElLuDoO] 'delega' live balance updated to 760 pts (+10 credited)!",
-          "[02:33:35] [KbElLuDoO] 'biscoitao' live balance updated to 90 pts (+10 credited)!",
-          "[02:33:57] [KbElLuDoO] 'xqc' live balance updated to 2350 pts (+10 credited)!",
-          "[02:33:58] [KbElLuDoO] 'sheviii2k' live balance updated to 2620 pts (+10 credited)!",
-          "[02:33:58] [KbElLuDoO] 'jotajogadas' live balance updated to 0 pts (+10 credited)!",
-          "[02:36:37] [KbElLuDoO] 'gaules' live balance updated to 15140 pts (+10 credited)!",
-          "[02:36:41] [KbElLuDoO] 'baianotv' live balance updated to 0 pts (+10 credited)!",
-          "[02:36:43] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
-          "[02:36:59] [KbElLuDoO] 'kyootbot' live balance updated to 150 pts (+10 credited)!",
-          "[02:37:11] [KbElLuDoO] 'cogu' live balance updated to 3070 pts (+10 credited)!",
-          "[02:37:45] [KbElLuDoO] 'matta' live balance updated to 11250 pts (+10 credited)!",
-          "[02:37:53] [KbElLuDoO] 'mizkif' live balance updated to 6160 pts (+10 credited)!",
-          "[02:38:02] [KbElLuDoO] 'delega' live balance updated to 770 pts (+10 credited)!",
-          "[02:38:35] [KbElLuDoO] 'biscoitao' live balance updated to 90 pts (+10 credited)!",
-          "[02:38:42] [KbElLuDoO] WebSocket for 'baianotv' dropped: ws read: WebSocket protocol error: Connection reset without closing handshake. Reconnecting in 20s…",
-          "[02:38:57] [KbElLuDoO] 'xqc' live balance updated to 2350 pts (+10 credited)!",
-          "[02:38:58] [KbElLuDoO] 'sheviii2k' live balance updated to 2620 pts (+10 credited)!",
-          "[02:38:58] [KbElLuDoO] 'jotajogadas' live balance updated to 0 pts (+10 credited)!",
-          "[02:39:04] [KbElLuDoO] Connected to 'baianotv' live! Current balance: 0 pts (+10 every 5m).",
-          "[02:39:04] [KbElLuDoO] WebSocket for 'sheviii2k' dropped: ws read: WebSocket protocol error: Connection reset without closing handshake. Reconnecting in 120s…",
-          "[02:41:05] [KbElLuDoO] Connected to 'sheviii2k' live! Current balance: 2620 pts (+10 every 5m).",
-          "[02:41:37] [KbElLuDoO] 'gaules' live balance updated to 15140 pts (+10 credited)!",
-          "[02:41:43] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
-          "[02:41:59] [KbElLuDoO] 'kyootbot' live balance updated to 150 pts (+10 credited)!",
-          "[02:42:11] [KbElLuDoO] 'cogu' live balance updated to 3080 pts (+10 credited)!",
-          "[02:42:45] [KbElLuDoO] 'matta' live balance updated to 11260 pts (+10 credited)!",
-          "[02:42:53] [KbElLuDoO] 'mizkif' live balance updated to 6170 pts (+10 credited)!",
-          "[02:43:02] [KbElLuDoO] 'delega' live balance updated to 770 pts (+10 credited)!",
-          "[02:43:35] [KbElLuDoO] 'biscoitao' live balance updated to 90 pts (+10 credited)!",
-          "[02:43:57] [KbElLuDoO] 'xqc' live balance updated to 2350 pts (+10 credited)!",
-          "[02:43:58] [KbElLuDoO] 'jotajogadas' live balance updated to 0 pts (+10 credited)!",
-          "[02:44:04] [KbElLuDoO] 'baianotv' live balance updated to 0 pts (+10 credited)!",
-          "[02:46:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2620 pts (+10 credited)!",
-          "[02:46:37] [KbElLuDoO] 'gaules' live balance updated to 15140 pts (+10 credited)!",
-          "[02:46:43] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
-          "[02:46:59] [KbElLuDoO] 'kyootbot' live balance updated to 150 pts (+10 credited)!",
-          "[02:47:01] [KbElLuDoO] WebSocket for 'gaules' dropped: ws read: WebSocket protocol error: Connection reset without closing handshake. Reconnecting in 80s…",
-          "[02:47:11] [KbElLuDoO] 'cogu' live balance updated to 3080 pts (+10 credited)!",
-          "[02:47:45] [KbElLuDoO] 'matta' live balance updated to 11260 pts (+10 credited)!",
-          "[02:47:53] [KbElLuDoO] 'mizkif' live balance updated to 6170 pts (+10 credited)!",
-          "[02:48:03] [KbElLuDoO] 'delega' live balance updated to 780 pts (+10 credited)!",
-          "[02:48:22] [KbElLuDoO] Connected to 'gaules' live! Current balance: 15140 pts (+10 every 5m).",
-          "[02:48:36] [KbElLuDoO] 'biscoitao' live balance updated to 90 pts (+10 credited)!",
-          "[02:48:45] [KbElLuDoO] WebSocket for 'kyootbot' dropped: ws read: WebSocket protocol error: Connection reset without closing handshake. Reconnecting in 5s…",
-          "[02:48:51] [KbElLuDoO] Connected to 'kyootbot' live! Current balance: 150 pts (+10 every 5m).",
-          "[02:48:57] [KbElLuDoO] 'xqc' live balance updated to 2350 pts (+10 credited)!",
-          "[02:48:58] [KbElLuDoO] 'jotajogadas' live balance updated to 0 pts (+10 credited)!",
-          "[02:49:04] [KbElLuDoO] 'baianotv' live balance updated to 0 pts (+10 credited)!",
-          "[02:51:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2620 pts (+10 credited)!",
-          "[02:51:43] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
-          "[02:51:54] [KbElLuDoO] 'kbelludoo' stream ended; slot freed.",
-          "[02:52:12] [KbElLuDoO] 'cogu' live balance updated to 3090 pts (+10 credited)!",
-          "[02:52:19] [KbElLuDoO] Starting watcher for 'linsjr' [auto-fill].",
-          "[02:52:20] [KbElLuDoO] Connected to 'linsjr' live! Current balance: 60 pts (+10 every 5m).",
-          "[02:52:44] [KbElLuDoO] WebSocket for 'biscoitao' dropped: ws read: WebSocket protocol error: Connection reset without closing handshake. Reconnecting in 40s…",
-          "[02:52:45] [KbElLuDoO] 'matta' live balance updated to 11270 pts (+10 credited)!",
-          "[02:52:53] [KbElLuDoO] 'mizkif' live balance updated to 6180 pts (+10 credited)!",
-          "[02:53:02] [KbElLuDoO] 'delega' live balance updated to 780 pts (+10 credited)!",
-          "[02:53:22] [KbElLuDoO] 'gaules' live balance updated to 15140 pts (+10 credited)!",
-          "[02:53:25] [KbElLuDoO] Connected to 'biscoitao' live! Current balance: 90 pts (+10 every 5m).",
-          "[02:53:51] [KbElLuDoO] 'kyootbot' live balance updated to 150 pts (+10 credited)!",
-          "[02:53:57] [KbElLuDoO] 'xqc' live balance updated to 2350 pts (+10 credited)!",
-          "[02:53:58] [KbElLuDoO] 'jotajogadas' live balance updated to 0 pts (+10 credited)!",
-          "[02:54:04] [KbElLuDoO] 'baianotv' live balance updated to 0 pts (+10 credited)!",
-          "[02:54:57] [KbElLuDoO] Starting watcher for 'kbelludoo'.",
-          "[02:54:59] [KbElLuDoO] Connected to 'kbelludoo' live! Current balance: 0 pts (+10 every 5m).",
-          "[02:56:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2620 pts (+10 credited)!",
-          "[02:57:12] [KbElLuDoO] 'cogu' live balance updated to 3090 pts (+10 credited)!",
-          "[02:57:45] [KbElLuDoO] 'matta' live balance updated to 11270 pts (+10 credited)!",
-          "[02:57:53] [KbElLuDoO] 'mizkif' live balance updated to 6190 pts (+10 credited)!",
-          "[02:58:02] [KbElLuDoO] 'delega' live balance updated to 790 pts (+10 credited)!",
-          "[02:58:25] [KbElLuDoO] 'gaules' live balance updated to 15140 pts (+10 credited)!",
-          "[02:58:26] [KbElLuDoO] 'biscoitao' live balance updated to 90 pts (+10 credited)!",
-          "[02:58:51] [KbElLuDoO] 'kyootbot' live balance updated to 150 pts (+10 credited)!",
-          "[02:58:57] [KbElLuDoO] 'xqc' live balance updated to 2350 pts (+10 credited)!",
-          "[02:58:58] [KbElLuDoO] 'jotajogadas' live balance updated to 0 pts (+10 credited)!",
-          "[02:59:04] [KbElLuDoO] 'baianotv' live balance updated to 0 pts (+10 credited)!",
-          "[03:00:00] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
-          "[03:01:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2620 pts (+10 credited)!",
-          "[03:02:11] [KbElLuDoO] 'cogu' live balance updated to 3090 pts (+10 credited)!",
-          "[03:02:45] [KbElLuDoO] 'matta' live balance updated to 11270 pts (+10 credited)!",
-          "[03:02:52] [KbElLuDoO] 'mizkif' live balance updated to 6200 pts (+10 credited)!",
-          "[03:03:02] [KbElLuDoO] 'delega' live balance updated to 790 pts (+10 credited)!",
-          "[03:03:23] [KbElLuDoO] 'gaules' live balance updated to 15140 pts (+10 credited)!",
-          "[03:03:26] [KbElLuDoO] 'biscoitao' live balance updated to 90 pts (+10 credited)!",
-          "[03:03:52] [KbElLuDoO] 'kyootbot' live balance updated to 150 pts (+10 credited)!",
-          "[03:03:57] [KbElLuDoO] 'xqc' live balance updated to 2350 pts (+10 credited)!",
-          "[03:03:58] [KbElLuDoO] 'jotajogadas' live balance updated to 0 pts (+10 credited)!"
+          "[05:18:22] [KbElLuDoO] 'gaules' live balance updated to 15160 pts (+10 credited)!",
+          "[05:18:57] [KbElLuDoO] 'xqc' live balance updated to 2370 pts (+10 credited)!",
+          "[05:21:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2640 pts (+10 credited)!",
+          "[05:21:13] [KbElLuDoO] 'gtzinholives' live balance updated to 570 pts (+10 credited)!",
+          "[05:21:30] [KbElLuDoO] 'junninhofut' live balance updated to 0 pts (+10 credited)!",
+          "[05:22:03] [KbElLuDoO] 'amouranth' live balance updated to 4040 pts (+10 credited)!",
+          "[05:22:11] [KbElLuDoO] 'cogu' live balance updated to 3110 pts (+10 credited)!",
+          "[05:22:13] [KbElLuDoO] 'ovelheram' live balance updated to 10 pts (+10 credited)!",
+          "[05:22:16] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
+          "[05:22:44] [KbElLuDoO] 'iceinmyvein' live balance updated to 0 pts (+10 credited)!",
+          "[05:22:59] [KbElLuDoO] 'moraismta' live balance updated to 80 pts (+10 credited)!",
+          "[05:23:02] [KbElLuDoO] 'delega' live balance updated to 910 pts (+10 credited)!",
+          "[05:23:22] [KbElLuDoO] 'gaules' live balance updated to 15160 pts (+10 credited)!",
+          "[05:23:57] [KbElLuDoO] 'xqc' live balance updated to 2370 pts (+10 credited)!",
+          "[05:26:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2640 pts (+10 credited)!",
+          "[05:26:13] [KbElLuDoO] 'gtzinholives' live balance updated to 580 pts (+10 credited)!",
+          "[05:26:30] [KbElLuDoO] 'junninhofut' live balance updated to 0 pts (+10 credited)!",
+          "[05:27:03] [KbElLuDoO] 'amouranth' live balance updated to 4040 pts (+10 credited)!",
+          "[05:27:11] [KbElLuDoO] 'cogu' live balance updated to 3110 pts (+10 credited)!",
+          "[05:27:13] [KbElLuDoO] 'ovelheram' live balance updated to 10 pts (+10 credited)!",
+          "[05:27:16] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
+          "[05:27:44] [KbElLuDoO] 'iceinmyvein' live balance updated to 0 pts (+10 credited)!",
+          "[05:28:00] [KbElLuDoO] 'moraismta' live balance updated to 90 pts (+10 credited)!",
+          "[05:28:02] [KbElLuDoO] 'delega' live balance updated to 910 pts (+10 credited)!",
+          "[05:28:22] [KbElLuDoO] 'gaules' live balance updated to 15160 pts (+10 credited)!",
+          "[05:28:57] [KbElLuDoO] 'xqc' live balance updated to 2370 pts (+10 credited)!",
+          "[05:31:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2640 pts (+10 credited)!",
+          "[05:31:13] [KbElLuDoO] 'gtzinholives' live balance updated to 590 pts (+10 credited)!",
+          "[05:31:30] [KbElLuDoO] 'junninhofut' live balance updated to 0 pts (+10 credited)!",
+          "[05:32:03] [KbElLuDoO] 'amouranth' live balance updated to 4040 pts (+10 credited)!",
+          "[05:32:12] [KbElLuDoO] 'cogu' live balance updated to 3110 pts (+10 credited)!",
+          "[05:32:13] [KbElLuDoO] 'ovelheram' live balance updated to 10 pts (+10 credited)!",
+          "[05:32:16] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
+          "[05:32:44] [KbElLuDoO] 'iceinmyvein' live balance updated to 0 pts (+10 credited)!",
+          "[05:32:59] [KbElLuDoO] 'moraismta' live balance updated to 100 pts (+10 credited)!",
+          "[05:33:02] [KbElLuDoO] 'delega' live balance updated to 910 pts (+10 credited)!",
+          "[05:33:23] [KbElLuDoO] 'gaules' live balance updated to 15160 pts (+10 credited)!",
+          "[05:33:57] [KbElLuDoO] 'xqc' live balance updated to 2370 pts (+10 credited)!",
+          "[05:36:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2640 pts (+10 credited)!",
+          "[05:36:13] [KbElLuDoO] 'gtzinholives' live balance updated to 600 pts (+10 credited)!",
+          "[05:36:30] [KbElLuDoO] 'junninhofut' live balance updated to 0 pts (+10 credited)!",
+          "[05:37:03] [KbElLuDoO] 'amouranth' live balance updated to 4040 pts (+10 credited)!",
+          "[05:37:11] [KbElLuDoO] 'cogu' live balance updated to 3110 pts (+10 credited)!",
+          "[05:37:13] [KbElLuDoO] 'ovelheram' live balance updated to 10 pts (+10 credited)!",
+          "[05:37:16] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
+          "[05:37:44] [KbElLuDoO] 'iceinmyvein' live balance updated to 0 pts (+10 credited)!",
+          "[05:37:59] [KbElLuDoO] 'moraismta' live balance updated to 110 pts (+10 credited)!",
+          "[05:38:02] [KbElLuDoO] 'delega' live balance updated to 910 pts (+10 credited)!",
+          "[05:38:22] [KbElLuDoO] 'gaules' live balance updated to 15160 pts (+10 credited)!",
+          "[05:38:57] [KbElLuDoO] 'xqc' live balance updated to 2370 pts (+10 credited)!",
+          "[05:41:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2640 pts (+10 credited)!",
+          "[05:41:13] [KbElLuDoO] 'gtzinholives' live balance updated to 610 pts (+10 credited)!",
+          "[05:41:30] [KbElLuDoO] 'junninhofut' live balance updated to 0 pts (+10 credited)!",
+          "[05:42:03] [KbElLuDoO] 'amouranth' live balance updated to 4040 pts (+10 credited)!",
+          "[05:42:11] [KbElLuDoO] 'cogu' live balance updated to 3110 pts (+10 credited)!",
+          "[05:42:13] [KbElLuDoO] 'ovelheram' live balance updated to 10 pts (+10 credited)!",
+          "[05:42:16] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
+          "[05:42:44] [KbElLuDoO] 'iceinmyvein' live balance updated to 0 pts (+10 credited)!",
+          "[05:42:59] [KbElLuDoO] 'moraismta' live balance updated to 120 pts (+10 credited)!",
+          "[05:43:02] [KbElLuDoO] 'delega' live balance updated to 910 pts (+10 credited)!",
+          "[05:43:22] [KbElLuDoO] 'gaules' live balance updated to 15160 pts (+10 credited)!",
+          "[05:43:57] [KbElLuDoO] 'xqc' live balance updated to 2370 pts (+10 credited)!",
+          "[05:46:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2640 pts (+10 credited)!",
+          "[05:46:13] [KbElLuDoO] 'gtzinholives' live balance updated to 620 pts (+10 credited)!",
+          "[05:46:30] [KbElLuDoO] 'junninhofut' live balance updated to 0 pts (+10 credited)!",
+          "[05:47:03] [KbElLuDoO] 'amouranth' live balance updated to 4040 pts (+10 credited)!",
+          "[05:47:11] [KbElLuDoO] 'cogu' live balance updated to 3110 pts (+10 credited)!",
+          "[05:47:13] [KbElLuDoO] 'ovelheram' live balance updated to 10 pts (+10 credited)!",
+          "[05:47:16] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
+          "[05:47:44] [KbElLuDoO] 'iceinmyvein' live balance updated to 0 pts (+10 credited)!",
+          "[05:47:59] [KbElLuDoO] 'moraismta' live balance updated to 130 pts (+10 credited)!",
+          "[05:48:02] [KbElLuDoO] 'delega' live balance updated to 910 pts (+10 credited)!",
+          "[05:48:22] [KbElLuDoO] 'gaules' live balance updated to 15160 pts (+10 credited)!",
+          "[05:48:57] [KbElLuDoO] 'xqc' live balance updated to 2370 pts (+10 credited)!",
+          "[05:51:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2640 pts (+10 credited)!",
+          "[05:51:13] [KbElLuDoO] 'gtzinholives' live balance updated to 620 pts (+10 credited)!",
+          "[05:51:30] [KbElLuDoO] 'junninhofut' live balance updated to 0 pts (+10 credited)!",
+          "[05:52:03] [KbElLuDoO] 'amouranth' live balance updated to 4050 pts (+10 credited)!",
+          "[05:52:11] [KbElLuDoO] 'cogu' live balance updated to 3110 pts (+10 credited)!",
+          "[05:52:13] [KbElLuDoO] 'ovelheram' live balance updated to 10 pts (+10 credited)!",
+          "[05:52:16] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
+          "[05:52:44] [KbElLuDoO] 'iceinmyvein' live balance updated to 0 pts (+10 credited)!",
+          "[05:52:59] [KbElLuDoO] 'moraismta' live balance updated to 140 pts (+10 credited)!",
+          "[05:53:02] [KbElLuDoO] 'delega' live balance updated to 910 pts (+10 credited)!",
+          "[05:53:22] [KbElLuDoO] 'gaules' live balance updated to 15160 pts (+10 credited)!",
+          "[05:53:57] [KbElLuDoO] 'xqc' live balance updated to 2370 pts (+10 credited)!",
+          "[05:56:05] [KbElLuDoO] 'sheviii2k' live balance updated to 2640 pts (+10 credited)!",
+          "[05:56:13] [KbElLuDoO] 'gtzinholives' live balance updated to 630 pts (+10 credited)!",
+          "[05:56:26] [KbElLuDoO] 'moraismta' stream ended; slot freed.",
+          "[05:56:30] [KbElLuDoO] 'junninhofut' live balance updated to 0 pts (+10 credited)!",
+          "[05:56:43] [KbElLuDoO] Starting watcher for 'rodil' [auto-fill].",
+          "[05:56:44] [KbElLuDoO] Connected to 'rodil' live! Current balance: 2830 pts (+10 every 5m).",
+          "[05:57:03] [KbElLuDoO] 'amouranth' live balance updated to 4050 pts (+10 credited)!",
+          "[05:57:11] [KbElLuDoO] 'cogu' live balance updated to 3110 pts (+10 credited)!",
+          "[05:57:13] [KbElLuDoO] 'ovelheram' live balance updated to 10 pts (+10 credited)!",
+          "[05:57:16] [KbElLuDoO] 'kbelludoo' live balance updated to 0 pts (+10 credited)!",
+          "[05:57:44] [KbElLuDoO] 'iceinmyvein' live balance updated to 0 pts (+10 credited)!",
+          "[05:58:02] [KbElLuDoO] 'delega' live balance updated to 920 pts (+10 credited)!",
+          "[05:58:22] [KbElLuDoO] 'gaules' live balance updated to 15160 pts (+10 credited)!",
+          "[05:58:57] [KbElLuDoO] 'xqc' live balance updated to 2370 pts (+10 credited)!"
         ]
       }
     },
@@ -986,14 +1026,14 @@
             "codex_info": "Completo (3/3 mobs) | Foco XP",
             "currentArea": "Castelo dos Demônios (Zumbi Faminto Nv 30)",
             "current_area": "Castelo dos Demônios (Zumbi Faminto Nv 30)",
-            "durationSec": 2439,
-            "duration_sec": 2439,
-            "expPerHour": 350674.90046716284,
-            "exp_per_hour": 350674.90046716284,
-            "gold": 1930301,
+            "durationSec": 2010,
+            "duration_sec": 2010,
+            "expPerHour": 357965.1047660265,
+            "exp_per_hour": 357965.1047660265,
+            "gold": 1932800,
             "hp": 875,
             "id": "acc-1",
-            "kills": 5472,
+            "kills": 11201,
             "level": 27,
             "logs": [
               "Party sincronizada.",
@@ -1027,14 +1067,14 @@
             "codex_info": "Completo (3/3 mobs) | Foco XP",
             "currentArea": "Castelo dos Demônios (Zumbi Faminto Nv 30)",
             "current_area": "Castelo dos Demônios (Zumbi Faminto Nv 30)",
-            "durationSec": 4275,
-            "duration_sec": 4275,
-            "expPerHour": 419707.82278703025,
-            "exp_per_hour": 419707.82278703025,
-            "gold": 2654451,
+            "durationSec": 2430,
+            "duration_sec": 2430,
+            "expPerHour": 371081.2498715169,
+            "exp_per_hour": 371081.2498715169,
+            "gold": 2680273,
             "hp": 1100,
             "id": "acc-2",
-            "kills": 17231,
+            "kills": 11625,
             "level": 36,
             "logs": [
               "Party sincronizada.",
@@ -1068,14 +1108,14 @@
             "codex_info": "Completo (3/3 mobs) | Foco XP",
             "currentArea": "Castelo dos Demônios (Zumbi Faminto Nv 30)",
             "current_area": "Castelo dos Demônios (Zumbi Faminto Nv 30)",
-            "durationSec": 3468,
-            "duration_sec": 3468,
-            "expPerHour": 408010.8102086771,
-            "exp_per_hour": 408010.8102086771,
-            "gold": 2181106,
+            "durationSec": 2070,
+            "duration_sec": 2070,
+            "expPerHour": 370199.15274388465,
+            "exp_per_hour": 370199.15274388465,
+            "gold": 2207391,
             "hp": 1000,
             "id": "acc-3",
-            "kills": 16914,
+            "kills": 11480,
             "level": 32,
             "logs": [
               "Party sincronizada.",
@@ -1086,13 +1126,13 @@
               "Party sincronizada.",
               "Party sincronizada.",
               "Party sincronizada.",
-              "Personagem derrotado em combate! Reiniciando...",
-              "Desistência confirmada. Retomando...",
               "Party sincronizada.",
               "Party sincronizada.",
               "Party sincronizada.",
-              "Codex Líder: Focando em Castelo dos Demônios (Zumbi Faminto Nv 30)",
-              "Caçada iniciada: Castelo dos Demônios (Zumbi Faminto Nv 30)"
+              "Party sincronizada.",
+              "Party sincronizada.",
+              "Party sincronizada.",
+              "Party sincronizada."
             ],
             "mana": 580,
             "maxHp": 1000,
@@ -1109,14 +1149,14 @@
             "codex_info": "Completo (3/3 mobs) | Foco XP",
             "currentArea": "Castelo dos Demônios (Zumbi Faminto Nv 30)",
             "current_area": "Castelo dos Demônios (Zumbi Faminto Nv 30)",
-            "durationSec": 4359,
-            "duration_sec": 4359,
-            "expPerHour": 426610.7935258918,
-            "exp_per_hour": 426610.7935258918,
-            "gold": 2656504,
+            "durationSec": 2544,
+            "duration_sec": 2544,
+            "expPerHour": 368017.597667527,
+            "exp_per_hour": 368017.597667527,
+            "gold": 2683809,
             "hp": 1075,
             "id": "acc-4",
-            "kills": 17375,
+            "kills": 11679,
             "level": 35,
             "logs": [
               "Party sincronizada.",
@@ -1153,8 +1193,8 @@
         "ramAllocMB": 1.85,
         "ramSysMB": 4.2,
         "total_accounts": 4,
-        "uptime": "1954s",
-        "uptime_sec": 1954
+        "uptime": "1213s",
+        "uptime_sec": 1213
       }
     },
     "lichess": {
@@ -1173,26 +1213,26 @@
         "title": "BOT",
         "mode": "berserk",
         "active_games": 0,
-        "games_played": 1112,
-        "wins": 75,
+        "games_played": 1204,
+        "wins": 80,
         "losses": 53,
-        "moves_played": 4231,
-        "last_move": "g7a1",
+        "moves_played": 4482,
+        "last_move": "g8h8",
         "last_eval": "+1.85 (Stockfish 19 NNUE)",
-        "last_opp": "Glimbus",
-        "db_symbols": 45623,
+        "last_opp": "Angela_eng",
+        "db_symbols": 46963,
         "idle_learner": {
           "enabled": true,
           "is_idle": true,
           "status": "🧠 Ocioso — Monitorando Lichess TV e Partidas de Grandes Mestres",
           "current_source": "Lichess TV / Top GMs",
-          "games_learned": 2630,
-          "moves_learned": 26292,
+          "games_learned": 2898,
+          "moves_learned": 28972,
           "last_game_desc": "[Lichess TV (best)] TonyGazzo (2882) venceu Mikkel_Vinh (3112)",
-          "last_learned_at": "2026-10-31T03:04:02.494052830+00:00",
-          "total_symbols": 45623
+          "last_learned_at": "2026-10-31T06:00:02.807685497+00:00",
+          "total_symbols": 46963
         },
-        "uptime_sec": 129912,
+        "uptime_sec": 140473,
         "ram_mb": "6.80 MB",
         "dashboard": "https://lichess.org/@/kbelludoo"
       }
@@ -1260,7 +1300,7 @@
         "game": "Lux Idle Online",
         "port": 3012,
         "total_accounts": 5,
-        "uptime_sec": 5977
+        "uptime_sec": 763
       }
     },
     "pocketweb": {
@@ -1308,7 +1348,7 @@
         "game": "PokeIdle Online",
         "port": 3006,
         "total_accounts": 1,
-        "uptime_sec": 7483
+        "uptime_sec": 492
       }
     },
     "pokeidleworld": {
@@ -1333,35 +1373,35 @@
             "expPerHour": 0.0,
             "status": "Desconectado",
             "currentArea": "Auto (Fraqueza Inteligente)",
-            "durationSec": 100594,
+            "durationSec": 68,
             "logs": [
-              "[03:03:29] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
-              "[03:03:33] Conectado ao servidor Poke Idle World.",
-              "[03:03:33] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
-              "[03:03:33] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
-              "[03:03:37] Conectado ao servidor Poke Idle World.",
-              "[03:03:37] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
-              "[03:03:37] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
-              "[03:03:41] Conectado ao servidor Poke Idle World.",
-              "[03:03:41] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
-              "[03:03:41] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
-              "[03:03:45] Conectado ao servidor Poke Idle World.",
-              "[03:03:45] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
-              "[03:03:45] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
-              "[03:03:48] Conectado ao servidor Poke Idle World.",
-              "[03:03:48] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
-              "[03:03:48] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
-              "[03:03:52] Conectado ao servidor Poke Idle World.",
-              "[03:03:52] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
-              "[03:03:52] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
-              "[03:03:56] Conectado ao servidor Poke Idle World.",
-              "[03:03:56] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
-              "[03:03:56] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
-              "[03:04:00] Conectado ao servidor Poke Idle World.",
-              "[03:04:00] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
-              "[03:04:00] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken..."
+              "[05:59:31] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
+              "[05:59:35] Conectado ao servidor Poke Idle World.",
+              "[05:59:35] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
+              "[05:59:35] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
+              "[05:59:40] Conectado ao servidor Poke Idle World.",
+              "[05:59:40] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
+              "[05:59:40] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
+              "[05:59:43] Conectado ao servidor Poke Idle World.",
+              "[05:59:43] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
+              "[05:59:43] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
+              "[05:59:47] Conectado ao servidor Poke Idle World.",
+              "[05:59:47] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
+              "[05:59:47] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
+              "[05:59:50] Conectado ao servidor Poke Idle World.",
+              "[05:59:50] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
+              "[05:59:50] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
+              "[05:59:54] Conectado ao servidor Poke Idle World.",
+              "[05:59:54] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
+              "[05:59:54] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
+              "[05:59:58] Conectado ao servidor Poke Idle World.",
+              "[05:59:58] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
+              "[05:59:58] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken...",
+              "[06:00:01] Conectado ao servidor Poke Idle World.",
+              "[06:00:01] Conexão WebSocket interrompida: websocket: close unauthorized (4001)",
+              "[06:00:01] Token inválido/expirado detectado (4001). Tentando renovar via refreshToken..."
             ],
-            "updatedAt": 1793415841499,
+            "updatedAt": 1793426402728,
             "extra": {
               "autoWeakness": true,
               "balls": 0,
@@ -1379,7 +1419,7 @@
         "goroutines": 0,
         "ramAllocMB": 2.18,
         "ramSysMB": 7.65,
-        "uptime": "27h56m34s"
+        "uptime": "0h1m8s"
       }
     },
     "pokelegacy": {
@@ -1392,51 +1432,51 @@
         "accounts": [
           {
             "cb_state": "Closed",
-            "exp": 805000,
+            "exp": 120400,
             "fatigue": 0.0,
-            "gold": 276000,
+            "gold": 41280,
             "id": "acc-1",
-            "kills": 2300,
+            "kills": 344,
             "name": "Conta 1 (kbelludoo)",
             "running": true
           },
           {
             "cb_state": "Closed",
-            "exp": 805000,
+            "exp": 120400,
             "fatigue": 0.0,
-            "gold": 276000,
+            "gold": 41280,
             "id": "acc-2",
-            "kills": 2300,
+            "kills": 344,
             "name": "Conta 2 (LrN)",
             "running": true
           },
           {
             "cb_state": "Closed",
-            "exp": 805000,
+            "exp": 120400,
             "fatigue": 0.0,
-            "gold": 276000,
+            "gold": 41280,
             "id": "acc-3",
-            "kills": 2300,
+            "kills": 344,
             "name": "Conta 3 (kbelludoo2)",
             "running": true
           },
           {
             "cb_state": "Closed",
-            "exp": 805000,
+            "exp": 120400,
             "fatigue": 0.0,
-            "gold": 276000,
+            "gold": 41280,
             "id": "acc-4",
-            "kills": 2300,
+            "kills": 344,
             "name": "Conta 4 (kbelludool)",
             "running": true
           },
           {
             "cb_state": "Closed",
-            "exp": 805000,
+            "exp": 120400,
             "fatigue": 0.0,
-            "gold": 276000,
+            "gold": 41280,
             "id": "acc-5",
-            "kills": 2300,
+            "kills": 344,
             "name": "Conta 5 (kbelludooom)",
             "running": true
           }
@@ -1445,7 +1485,7 @@
         "game": "PokeLegacy Online",
         "port": 3005,
         "total_accounts": 5,
-        "uptime_sec": 6898
+        "uptime_sec": 1031
       }
     },
     "pokepixel": {
@@ -1470,35 +1510,13 @@
             "expPerHour": 0.0,
             "status": "Falha no Login",
             "currentArea": "auto",
-            "durationSec": 101353,
+            "durationSec": 31,
             "logs": [
-              "[20:57:33] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[21:12:35] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[21:27:37] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[21:42:39] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[21:57:40] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[22:12:42] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[22:27:44] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[22:42:45] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[22:57:47] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[23:12:49] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[23:27:51] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[23:42:53] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[23:57:54] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[00:12:56] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[00:27:58] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[00:42:59] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[00:58:01] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[01:13:03] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[01:28:05] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[01:43:07] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[01:58:09] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[02:13:11] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[02:28:14] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[02:43:16] 🎁 Coletando recompensas diárias, missões e stamina...",
-              "[02:58:19] 🎁 Coletando recompensas diárias, missões e stamina..."
+              "[05:59:31] Inicializando cliente PokePixel Rust...",
+              "[05:59:31] Efetuando login para kbelludoo@gmail.com...",
+              "[05:59:32] Falha ao autenticar: HTTP 401 em /auth/login: {\"error\":{\"code\":\"INVALID_CREDENTIALS\",\"message\":\"invalid login or password\"}}\n"
             ],
-            "updatedAt": 1793415842390,
+            "updatedAt": 1793426402806,
             "extra": {
               "bestiaryFocus": false,
               "circuitState": "CLOSED (Operação Normal)",
@@ -1511,7 +1529,7 @@
         "goroutines": 0,
         "ramAllocMB": 2.15,
         "ramSysMB": 7.42,
-        "uptime": "28h9m13s"
+        "uptime": "0h0m31s"
       }
     },
     "poketrue": {
@@ -1524,31 +1542,31 @@
         "accounts": [
           {
             "cb_state": "Closed",
-            "exp": 9843750,
+            "exp": 1327500,
             "fatigue": 0.0,
-            "gold": 2054370,
+            "gold": 29500,
             "id": "treinador-1",
-            "kills": 4375,
+            "kills": 590,
             "name": "kbelludoo",
             "running": true
           },
           {
             "cb_state": "Closed",
-            "exp": 9843750,
+            "exp": 1327500,
             "fatigue": 0.0,
-            "gold": 257626,
+            "gold": 29500,
             "id": "treinador-2",
-            "kills": 4375,
+            "kills": 590,
             "name": "LrN",
             "running": true
           },
           {
             "cb_state": "Closed",
-            "exp": 9837000,
+            "exp": 1325250,
             "fatigue": 0.0,
-            "gold": 332704,
+            "gold": 29450,
             "id": "treinador-3",
-            "kills": 4372,
+            "kills": 589,
             "name": "klord",
             "running": true
           }
@@ -1557,7 +1575,7 @@
         "game": "PokeTrue / PokeIdle",
         "port": 3014,
         "total_accounts": 3,
-        "uptime_sec": 6701
+        "uptime_sec": 896
       }
     },
     "sigma": {
@@ -1589,7 +1607,8 @@
             "inHunt": false,
             "kills": 0,
             "killsPerMin": 0.0,
-            "lastAction": "Autenticando...",
+            "lastAction": "Erro: Login falhou (403): esta conta foi banida (código: Some(\"banned\")) (tentando em 30s)",
+            "lastError": "Login falhou (403): esta conta foi banida (código: Some(\"banned\"))",
             "leaderHp": 0,
             "leaderLevel": 0,
             "leaderMaxHp": 0,
@@ -1605,7 +1624,7 @@
             "teamSize": 0,
             "trainerName": "kbelludoo",
             "trainerXpGained": 0,
-            "updatedAt": 1793413693189,
+            "updatedAt": 1793423011608,
             "vipActive": false,
             "vipExpiringSoon": false,
             "wildHp": 0,
@@ -1640,7 +1659,8 @@
             "inHunt": false,
             "kills": 0,
             "killsPerMin": 0.0,
-            "lastAction": "Autenticando...",
+            "lastAction": "Erro: Login falhou (403): esta conta foi banida (código: Some(\"banned\")) (tentando em 30s)",
+            "lastError": "Login falhou (403): esta conta foi banida (código: Some(\"banned\"))",
             "leaderHp": 0,
             "leaderLevel": 0,
             "leaderMaxHp": 0,
@@ -1656,7 +1676,7 @@
             "teamSize": 0,
             "trainerName": "kbelludoo2",
             "trainerXpGained": 0,
-            "updatedAt": 1793413693189,
+            "updatedAt": 1793423011608,
             "vipActive": false,
             "vipExpiringSoon": false,
             "wildHp": 0,
@@ -1691,7 +1711,8 @@
             "inHunt": false,
             "kills": 0,
             "killsPerMin": 0.0,
-            "lastAction": "Autenticando...",
+            "lastAction": "Erro: Login falhou (403): esta conta foi banida (código: Some(\"banned\")) (tentando em 30s)",
+            "lastError": "Login falhou (403): esta conta foi banida (código: Some(\"banned\"))",
             "leaderHp": 0,
             "leaderLevel": 0,
             "leaderMaxHp": 0,
@@ -1707,7 +1728,7 @@
             "teamSize": 0,
             "trainerName": "lohmoreira",
             "trainerXpGained": 0,
-            "updatedAt": 1793413693190,
+            "updatedAt": 1793423011608,
             "vipActive": false,
             "vipExpiringSoon": false,
             "wildHp": 0,
@@ -1723,7 +1744,7 @@
           }
         ],
         "ramMB": 3.2,
-        "serverTime": 1793415841181
+        "serverTime": 1793426402725
       }
     },
     "telegram": {
@@ -1769,7 +1790,7 @@
         "game": "Tibia Idle",
         "port": 3001,
         "total_accounts": 1,
-        "uptime_sec": 6404
+        "uptime_sec": 627
       }
     },
     "twitchminer": {
@@ -1789,9 +1810,10 @@
           "[03:47:09] [kbelludoo] 📴 Live de 'Baiano' finalizou; slot liberado.",
           "[18:30:08] [kbelludoo] ⭐ Assistindo live de 'alanzoka'! Pontos: 0",
           "[19:24:09] [kbelludoo] ⭐ Assistindo live de 'Baiano'! Pontos: 1090",
-          "[01:28:08] [kbelludoo] 📴 Live de 'alanzoka' finalizou; slot liberado."
+          "[01:28:08] [kbelludoo] 📴 Live de 'alanzoka' finalizou; slot liberado.",
+          "[04:22:09] [kbelludoo] 📴 Live de 'Baiano' finalizou; slot liberado."
         ],
-        "ram_mb": 4.91015625,
+        "ram_mb": 5.72265625,
         "statuses": {
           "kbelludoo": {
             "streamers": {
@@ -1807,13 +1829,13 @@
               },
               "baiano": {
                 "displayName": "Baiano",
-                "isLive": true,
+                "isLive": false,
                 "lastClaimAt": "",
                 "login": "baiano",
                 "points": 1090,
-                "title": "🟢 Reacts & Gameplays | IDL NIGHTS 🟢 🌴 !cupom !sadia !status !grupo !kbmidl",
-                "viewers": 729,
-                "watching": true
+                "title": "",
+                "viewers": 0,
+                "watching": false
               },
               "brtt": {
                 "displayName": "brtt",
@@ -1852,7 +1874,7 @@
                 "login": "gaules",
                 "points": 0,
                 "title": "RERUN: Lobby do Alastro! - !socio - Siga @Gaules nas redes sociais!",
-                "viewers": 335,
+                "viewers": 297,
                 "watching": true
               },
               "loud_coringa": {
@@ -1880,7 +1902,7 @@
             "username": "kbelludoo"
           }
         },
-        "uptime": "28:42:53"
+        "uptime": "31:38:54"
       }
     },
     "restream": {
@@ -1895,8 +1917,8 @@
         "engine": "Native Rust Zero-GC (< 5MB RAM)",
         "port": 3011,
         "online": true,
-        "uptime_seconds": 2934,
-        "frames_emitted": 16944,
+        "uptime_seconds": 13495,
+        "frames_emitted": 122182,
         "active_accounts": 3,
         "total_gold": 0,
         "total_exp": 0,
@@ -1907,7 +1929,7 @@
           "Kick (active)",
           "YouTube (active)"
         ],
-        "timestamp": "2026-10-31T03:04:01.778742800+00:00"
+        "timestamp": "2026-10-31T06:00:02.802152533+00:00"
       }
     }
   },
@@ -1915,7 +1937,7 @@
     "activeBots": 19,
     "totalBots": 19
   },
-  "timestamp": 1793415843342,
+  "timestamp": 1793426403277,
   "vps": {
     "load": "0.15 0.18 0.16",
     "ramAvailableMb": 527,
