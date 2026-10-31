@@ -288,7 +288,7 @@ struct VnicDetails<'a> {
 async fn main() {
     println!("\x1b[1;36m=================================================================\x1b[0m");
     println!("\x1b[1;32m🦀 ORACLE ARM SNIPER — 100% RUST ZERO-GC ENGINE\x1b[0m");
-    println!("Alvo: Ubuntu 26.04 Minimal ARM (2 OCPUs, 12 GB RAM, 100 GB NVMe)");
+    println!("Alvo: Ubuntu 26.04 Minimal ARM (2 OCPUs, 12 GB RAM, 200 GB NVMe)");
     println!("Consumo Estimado de Memoria: ~2 MB RAM | Zero Python Runtime");
     println!(
         "\x1b[1;36m=================================================================\x1b[0m\n"
@@ -296,7 +296,7 @@ async fn main() {
 
     let ssh_key_sp = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDSx8Loag4kbo5jj2p4+REZzO6TanBxPDTKyCavdIQKKcIfoyVJgS7cnNAIfEZdV5S5jbH7xmOXGz5B3EXJngScCAHawyve2MPyR6C1z/UNduhsR4PvHlyWldvVLvT1lNXjGIwVGh21maVHPdFK2YHA1up7Zx3ttfyqSzxQX19/gyx805DLTm5EA7MF1ja6p8J4N6JACqnfTMVTkDwKUNNSxOXdCuYh3IZkDgJ9QdGhHm8D7OwmvyZdzgrZ2F5q8upP1F1b3F80gh9XMJaLJFK5xUFzWJykudFiqz5sRUUVU/LlUjsEKQjPFtXtlsbL1XKv1tDbhHO8wouTI5EQxdT5 ssh-key-2026-10-09";
 
-    // Configuracao de Sao Paulo
+    // Configuracao de Sao Paulo (Potencia Maxima: 2 OCPUs, 12 GB RAM, 200 GB NVMe)
     let sp_config = RegionConfig {
         name: "saopaulo".to_string(),
         display_name: "São Paulo (BR East)".to_string(),
@@ -310,7 +310,7 @@ async fn main() {
         shape: "VM.Standard.A1.Flex".to_string(),
         ocpus: 2.0,
         ram_gb: 12.0,
-        boot_volume_gb: 100,
+        boot_volume_gb: 200,
         subnet_id: "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaamhykqtiezgqujpjb3qwpt7sx6be7kduziztuf5q7g5jdjgk3vxga".to_string(),
         image_id: "ocid1.image.oc1.sa-saopaulo-1.aaaaaaaamgy43642gy2ta7pdh6etf6ye5kspe5u5bvj4hxvhrgjqwi3lohkq".to_string(),
         ads: vec!["vzaS:SA-SAOPAULO-1-AD-1".to_string()],

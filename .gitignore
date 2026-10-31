@@ -4,4 +4,10 @@ accounts.json
 *.log
 *.key
 *.pem
+*.tok
+*.env
 .secrets.json
+sp_backup/
+tokens*
+
+oracle-sniper-go/
